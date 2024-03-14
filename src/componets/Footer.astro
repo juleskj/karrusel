@@ -33,9 +33,9 @@ import Buttons from "./Buttons.astro";
   <div class="contact">
     <h3>Contact</h3>
     <p>
-      Email: info@nusnus.dk.
+      Email: <a href="https://www.nusnus.dk/contact/">info@nusnus.dk</a>
       <br />
-      Karrusel is organized by Nus Nus.
+      Karrusel is organized by <a href="https://www.nusnus.dk/">NusNus</a>
     </p>
   </div>
 </footer>
@@ -57,11 +57,13 @@ import Buttons from "./Buttons.astro";
     text-align: center;
   }
   form {
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 50px;
   }
   input {
     box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
   }
 
   input[id="Email"] {
@@ -75,16 +77,35 @@ import Buttons from "./Buttons.astro";
   label {
     display: none;
   }
-  input[type="submit"] {
-    border: pink 1px solid;
-  }
 
   @media (min-width: 800px) {
     footer {
       background-color: var(--offWhite);
       display: flex;
       flex-direction: row-reverse;
-      padding: 50px 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      padding: 0 50px 0 50px;
+
+      bottom: 0;
+    }
+
+    .form {
+      padding-bottom: 0;
+
+      margin: 20px 50px 20px 50px;
+    }
+    form {
+      padding-bottom: 0;
+    }
+    input {
+      height: 40px;
+    }
+    img {
+      width: 20%;
+      margin-bottom: 0;
     }
   }
 </style>
