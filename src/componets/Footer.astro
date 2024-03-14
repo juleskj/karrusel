@@ -7,26 +7,31 @@ import Buttons from "./Buttons.astro";
     src="../../public/img_karrusel/karrusel_logo_sort.svg"
     alt="karrusel logo"
   />
+  <div class="form">
+    <h2>Hold yourself updated with a newsletter!</h2>
 
-  <h2>Hold yourself updated with a newsletter!</h2>
-
-  <form>
-    <label for="Email"></label>
-    <input
-      type="text"
-      id="Email"
-      name="Email"
-      required
-      placeholder="Email:"
-    /><br />
-    <label for="telNo"></label>
-    <input type="tel" id="phone" name="phone" required placeholder="Tlf:" /><br
-    /><br />
-    <Buttons variant="primary" size="size">Send </Buttons>
-  </form>
-
+    <form>
+      <label for="Email"></label>
+      <input
+        type="text"
+        id="Email"
+        name="Email"
+        required
+        placeholder="Email:"
+      /><br />
+      <label for="telNo"></label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        placeholder="Tlf:"
+      /><br /><br />
+      <Buttons variant="primary" size="size">Send </Buttons>
+    </form>
+  </div>
   <div class="contact">
-    <h2>Contact</h2>
+    <h3>Contact</h3>
     <p>
       Email: info@nusnus.dk.
       <br />
@@ -48,14 +53,23 @@ import Buttons from "./Buttons.astro";
     align-self: center;
     margin-bottom: 50px;
   }
-
+  h2 {
+    text-align: center;
+  }
   form {
-    border: red 1px solid;
+    display: flex;
+    flex-direction: column;
   }
   input {
-    border: green 1px solid;
     box-sizing: border-box;
-    margin;
+  }
+
+  input[id="Email"] {
+    border-radius: 10px 10px 0 0;
+  }
+
+  input[id="phone"] {
+    border-radius: 0 0 10px 10px;
   }
 
   label {
@@ -63,5 +77,14 @@ import Buttons from "./Buttons.astro";
   }
   input[type="submit"] {
     border: pink 1px solid;
+  }
+
+  @media (min-width: 800px) {
+    footer {
+      background-color: var(--offWhite);
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 50px 50px;
+    }
   }
 </style>
