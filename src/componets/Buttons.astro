@@ -32,11 +32,19 @@ const {variant, size} = Astro.props;
 }
 
 /*********** size ***********/
-.mobil{
+
+/*********** Mobil *********/
+@media (max-width: 800px){
+    .size{
     font-size: 1rem;
 }
+}
 
-.desktop{
+/*********** Mobil *********/
+@media (min-width: 800px){
+    .size{
     font-size: 1.2rem;
 }
+}
+
 </style>
