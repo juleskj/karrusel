@@ -1,0 +1,117 @@
+---
+
+---
+
+<header>
+  <div class="hamburger_menu">
+    <input id="menu_toggle" type="checkbox" />
+    <label class="menu_knap" for="menu_toggle">
+      <span></span>
+    </label>
+
+    <ul>
+      <li><a href="line_up">Line up</a></li>
+      <li><a href="ticket">Ticket</a></li>
+      <li><a href="map">Map</a></li>
+      <li><a id="logo" href="/">Forside</a></li>
+      <li><a href="about_us">About us</a></li>
+      <li><a href="singleview">Singleview</a></li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  @media (max-width: 800px) {
+    #menu_toggle:checked ~ ul {
+      right: 0;
+    }
+
+    .menu_knap span {
+      position: fixed;
+      top: 5px;
+      right: 5px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      z-index: 2;
+      background-size: cover;
+      background-image: url(logo.svg);
+    }
+
+    .hamburger_menu ul {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 200px;
+      height: 100%;
+      margin: 0;
+      padding: 80px 0;
+      text-align: center;
+      background-color: var(--backgroundcolor);
+    }
+
+    li {
+      padding: 10px 0;
+    }
+
+    header a {
+      color: var(--offWhite);
+    }
+  }
+
+  @media (min-width: 800px) {
+    li :hover {
+      color: var(--hovergreen);
+      border-bottom: solid 1.5px var(--accentgreen);
+      border-radius: 2px;
+    }
+
+    header a {
+      color: var(--offBlack);
+    }
+    header {
+      background-color: var(--offWhite);
+    }
+  }
+
+  #menu_toggle {
+    display: none;
+  }
+
+  .hamburger-menu label,
+  .hamburger-menu input {
+    position: absolute;
+    display: none;
+    z-index: 1;
+  }
+
+  .menu_knap span {
+    background-image: url(favicon.svg);
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 20px 0;
+    margin-bottom: 30px;
+  }
+
+  header a {
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 0 10px;
+  }
+
+  .logo img {
+    max-width: 80px;
+  }
+</style>
