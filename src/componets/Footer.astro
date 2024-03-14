@@ -2,4 +2,64 @@
 
 ---
 
-<footer></footer>
+<footer>
+  <img
+    src="../../public/img_karrusel/karrusel_logo_sort.svg"
+    alt="karrusel logo"
+  />
+
+  <h2>Hold yourself updated with a newsletter!</h2>
+
+  <form>
+    <label for="Email"></label>
+    <input
+      type="text"
+      id="Email"
+      name="Email"
+      required
+      placeholder="Email:"
+    /><br />
+    <label for="telNo"></label>
+    <input type="tel" id="phone" name="phone" required placeholder="Tlf:" /><br
+    /><br />
+    <input type="submit" value="Send" />
+  </form>
+
+  <div class="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: info@nusnus.dk.
+      <br />
+      Karrusel is organized by Nus Nus.
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--offWhite);
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px;
+  }
+
+  img {
+    width: 50%;
+    align-self: center;
+    margin-bottom: 50px;
+  }
+
+  form {
+    border: red 1px solid;
+  }
+  input {
+    border: green 1px solid;
+  }
+
+  label {
+    border: blue 1px solid;
+  }
+  input[type="submit"] {
+    border: pink 1px solid;
+  }
+</style>
