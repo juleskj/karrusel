@@ -1,5 +1,5 @@
 ---
-
+import Buttons from "./Buttons.astro";
 ---
 
 <footer>
@@ -22,7 +22,7 @@
     <label for="telNo"></label>
     <input type="tel" id="phone" name="phone" required placeholder="Tlf:" /><br
     /><br />
-    <input type="submit" value="Send" />
+    <Buttons variant="primary" size="mobil">Send </Buttons>
   </form>
 
   <div class="contact">
@@ -54,10 +54,12 @@
   }
   input {
     border: green 1px solid;
+    box-sizing: border-box;
+    margin;
   }
 
   label {
-    border: blue 1px solid;
+    display: none;
   }
   input[type="submit"] {
     border: pink 1px solid;
