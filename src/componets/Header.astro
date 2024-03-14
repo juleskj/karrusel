@@ -21,6 +21,7 @@
 </header>
 
 <style>
+  /******** Brugermenu ************/
   @media (max-width: 800px) {
     #menu_toggle:checked ~ ul {
       right: 0;
@@ -58,22 +59,68 @@
     header a {
       color: var(--offWhite);
     }
+    
+    /**** Skjuler checkbox ****/
+  #menu_toggle {
+    opacity: 0;
   }
 
-  @media (min-width: 800px) {
-    li :hover {
-      color: var(--hovergreen);
-      border-bottom: solid 1.5px var(--accentgreen);
-      border-radius: 2px;
-    }
-
-    header a {
-      color: var(--offBlack);
-    }
-    header {
-      background-color: var(--offWhite);
-    }
+  /**** Når man klikker på burgermenu laver den kryds ****/
+  #menu_toggle:checked + .menu_knap > span {
+    transform: rotate(45deg);
   }
+  /*Samlet set betyder > span i dette kontekst, at CSS-reglen vil blive anvendt på <span>-elementet, der er et direkte barn af .menu_knap (label-elementet), når checkboxen med id "menu_toggle" er afkrydset (checked).*/
+
+  #menu_toggle:checked + .menu_knap > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  /*Samlet set betyder #menu_toggle:checked + .menu_knap > span::before, at CSS-reglen vil blive anvendt på pseudo-elementet ::before på <span>-elementet, som er et direkte barn af .menu_knap (label-elementet), når checkboxen med id "menu_toggle" er afkrydset (checked). Dette er ofte brugt til at skabe ekstra dekorative elementer, såsom linjer eller symboler, før indholdet af det valgte element.*/
+
+  #menu_toggle:checked + .menu_knap > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  /*Samlet set betyder #menu_toggle:checked + .menu_knap > span::after, at CSS-reglen vil blive anvendt på pseudo-elementet ::after på <span>-elementet, som er et direkte barn af .menu_knap (label-elementet), når checkboxen med id "menu_toggle" er afkrydset (checked). Dette kan bruges til at tilføje yderligere dekoration eller stil til "hamburger"-ikonet efter det faktiske indhold af <span>.*/
+
+  /**** Viser selve menuen ****/
+  #menu_toggle:checked ~ ul {
+    right: 0 !important;
+  }
+  /*~: Dette er "general sibling combinator" og vælger alle efterfølgende søskende elementer af det tidligere valgte element, der deler samme forælder.*/
+
+  /**** Udsseende af burgermenu knappen ****/
+  .menu_knap {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  /**** Viser burgermenu med de 3 streger ****/
+  .menu_knap > span,
+  .menu_knap > span::before,
+  .menu_knap > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fcfbf9;
+  }
+
+  .menu_knap > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu_knap > span::after {
+    content: "";
+    top: 8px;
+  }
+  }
+
 
   #menu_toggle {
     display: none;
@@ -113,5 +160,22 @@
 
   .logo img {
     max-width: 80px;
+  }
+
+
+  /******* Desktop **********/
+  @media (min-width: 800px) {
+    li :hover {
+      color: var(--hovergreen);
+      border-bottom: solid 1.5px var(--accentgreen);
+      border-radius: 2px;
+    }
+
+    header a {
+      color: var(--offBlack);
+    }
+    header {
+      background-color: var(--offWhite);
+    }
   }
 </style>
