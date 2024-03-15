@@ -7,6 +7,7 @@
   --lillabutton: #7f68c1;
   --lillabuttonhover: #b198f7;
   --lillacard: #332168;
+  --lillatekstcard: #2d224c;
 }
 
 * {
@@ -116,15 +117,15 @@ li a {
   }
   h2,
   .header_green {
-    font-size: 32px;
+    font-size: 30px;
   }
   h3,
   .important_points {
-    font-size: 28px;
+    font-size: 26px;
   }
   h4,
   input {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   p {
