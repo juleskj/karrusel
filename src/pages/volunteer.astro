@@ -3,5 +3,68 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Volenteer"> 
+    <h2>Our principles</h2>
+<section>
+    <p>Volunteering at a festival is a vibrant tapestry woven with threads of camaraderie, dedication, and the sheer joy of contributing to a shared experience. Festivals, whether celebrating music, culture, or art, thrive on the energy and passion of volunteers who dedicate their time and efforts to ensure the event's success.</p>
+    <p>Principles such as collaboration and teamwork form the foundation of successful festival volunteering. Volunteers often find themselves working in diverse teams, each member bringing their unique skills and perspectives to the table. This collaborative approach not only enhances the efficiency of the festival operations but also enriches the overall experience for both volunteers and attendees.</p>
+</section>
+
+<div class="article_grid">
+    <article class="bar_grid">
+        <h2>Volunteer bar and food truck crew</h2>
+        <p>Join the festival fun by becoming a volunteer at the bars and food trucks! It's a fantastic way to be part of the excitement and contribute to the vibrant atmosphere. As a volunteer, you'll help serve drinks or delicious bites, ensuring everyone has a great time. No experience is needed – just bring your positive energy and willingness to help. It's a chance to make new friends, soak in the festival vibes, and be a key player in creating an unforgettable experience for all!</p>
+    </article>
+    
+    <article>
+        <h2>Volunteer clean up crew</h2>
+        <p>Join the clean-up crew and be a festival hero! As a volunteer, you'll help keep the festival grounds tidy by picking up litter. It's a chance to make a meaningful impact and be part of a fantastic team. Ready to create a spotless and unforgettable festival experience? Sign up now!</p>
+    </article>
+    
+    <article>
+        <h2>Volunteer security crew</h2>
+        <p>Join the volunteer security team and play a crucial role in ensuring a safe and enjoyable experience for all. As a security volunteer, you'll contribute to maintaining a secure environment, assisting festival-goers, and adding to the positive vibes.</p>
+    </article>
+    
+    <article class="stage_grid">
+        <h2>Volunteer stage building crew 
+            - Pre festival</h2>
+            <p>Join the volunteer stage-building team and be a part of creating the magic before the event kicks off. No previous construction experience required – just bring your passion and eagerness to contribute. As a volunteer, you'll be instrumental in assembling stages, organizing equipment, and ensuring everything is set up for an unforgettable festival experience. Ready to be a vital part of the stage-building crew? Sign up now and let's craft an extraordinary festival together!</p>
+    </article>
+</div>
 
 </MainLayout>
+
+<style>
+
+    h2{
+        padding-bottom: 20px;
+    }
+    section{
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;  
+    }
+
+    article{
+        background-color: var(--lillatekstcard);
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .article_grid{
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding-top: 100px;   
+    }
+
+    .bar_grid{
+        grid-column: 1/3;
+    }
+
+    .stage_grid{
+        grid-row: 2/3;
+        grid-column: 2/4;
+    }
+
+  </style>
