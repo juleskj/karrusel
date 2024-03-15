@@ -1,22 +1,23 @@
 ---
-const { img, header3, header4, text } = Astro.props;
+const { data } = Astro.props;
 ---
 
 <article>
-  <img src={img} alt="Placeholder" />
-  <h3>{header3}</h3>
-  <h4>{header4}</h4>
-  <p>
-    {text}
-  </p>
+  <img src={"img_karrusel/" + data.image} alt={"image of " + data.artistName} />
+  <h3>{data.artistName}</h3>
+  <h4>{data.dato}</h4>
+  <p>Country: {data.country}</p>
+  <span>spotify</span>
   <a href="../pages/singleview.astro">Read more</a>
 </article>
 
 <style>
   article {
     display: border-box;
-    width: auto;
-    height: 400px;
-    background-color: pink;
+    background-color: var(--lillacard);
+  }
+
+  img {
+    width: 250px;
   }
 </style>
