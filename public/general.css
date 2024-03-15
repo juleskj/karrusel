@@ -55,7 +55,9 @@ li a {
   font-style: normal;
   font-weight: bold;
 }
-
+main {
+  color: var(--offWhite);
+}
 /********** Brødtekst, Forms tekst, Important points ***********/
 p,
 input,
