@@ -1,8 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Buttons from "../componets/Buttons.astro";
 ---
 
-<MainLayout title="Volenteer"> 
+<MainLayout> 
+    <div class="billede_med_tekst">
+        <img src="img_karrusel/frivillig.jpg" alt="Voulenteer in bar" />
+        <h1>Volenteer</h1>
+      </div>
+
     <h2>Our principles</h2>
 <section>
     <p>Volunteering at a festival is a vibrant tapestry woven with threads of camaraderie, dedication, and the sheer joy of contributing to a shared experience. Festivals, whether celebrating music, culture, or art, thrive on the energy and passion of volunteers who dedicate their time and efforts to ensure the event's success.</p>
@@ -32,9 +38,51 @@ import MainLayout from "../layouts/MainLayout.astro";
     </article>
 </div>
 
+<div class="form">
+    <h2>Hold yourself updated with a newsletter!</h2>
+
+    <form>
+      <label for="Email"></label>
+      <input
+        type="text"
+        id="Email"
+        name="Email"
+        required
+        placeholder="Email:"
+      /><br />
+      <label for="telNo"></label>
+      <input type="tel" id="phone" name="phone" required placeholder="Tlf:" />
+      <Buttons variant="primary" size="size">Send </Buttons>
+    </form>
+  </div>
+
 </MainLayout>
 
 <style>
+
+    /* Billede med tekst */
+.billede_med_tekst {
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+img {
+  width: 100%;
+  max-height: 600px;
+  height: auto;
+  display: block;
+  object-fit: cover; 
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+}
 
     h2{
         padding-bottom: 20px;
@@ -66,5 +114,41 @@ import MainLayout from "../layouts/MainLayout.astro";
         grid-row: 2/3;
         grid-column: 2/4;
     }
+
+    form {
+    padding-bottom: 50px;
+  }
+  input {
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+  }
+
+  input[id="Email"] {
+    border-radius: 10px 10px 0 0;
+  }
+
+  input[id="phone"] {
+    border-radius: 0 0 10px 10px;
+  }
+
+  label {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    .form {
+      padding-bottom: 0;
+
+      margin: 20px 50px 20px 50px;
+    }
+    form {
+      padding-bottom: 0;
+    }
+    input {
+      height: 40px;
+    }
+  }
 
   </style>
