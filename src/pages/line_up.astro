@@ -1,14 +1,43 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../componets/Card.astro";
+
+const data = await fetch(
+  "https://mxyfxhqkhfgyyjilxsyp.supabase.co/rest/v1/kunstner",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14eWZ4aHFraGZneXlqaWx4c3lwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTIxMjcsImV4cCI6MjAyNjA2ODEyN30.350mDzxoRHMq4A0wyQk4cc2Fks8AFFXKxv7PEaTSbIs",
+    },
+  }
+).then((respone) => {
+  return respone.json();
+});
+
+console.log(data);
 ---
 
-<MainLayout title="Line up"> 
-    <h2>Line-up</h2> 
-    <Card img="../../img_karrusel/forside.jpeg" header3="Code Walk" header4="Friday 23.08.24" text="Country: Denmark"></Card>
-    <Card img="../../img_karrusel/forside.jpeg" header3="Code Walk" header4="Friday 23.08.24" text="Country: Denmark"></Card>
-    <Card img="../../img_karrusel/forside.jpeg" header3="Code Walk" header4="Friday 23.08.24" text="Country: Denmark"></Card>
-    <Card img="../../img_karrusel/forside.jpeg" header3="Code Walk" header4="Friday 23.08.24" text="Country: Denmark"></Card>
-    <Card img="../../img_karrusel/forside.jpeg" header3="Code Walk" header4="Friday 23.08.24" text="Country: Denmark"></Card>
-    <Card img="../../img_karrusel/forside.jpeg" header3="Code Walk" header4="Friday 23.08.24" text="Country: Denmark"></Card>    
+<MainLayout title="Line up">
+  <h2>Line-up</h2>
+  <section class="line_up">
+    {
+      data.map((artist) => {
+        return <Card data={artist} />;
+      })
+    }
+  </section>
 </MainLayout>
+
+<style>
+  .line_up {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+  }
+</style>
+
+<!-- 
+https://mxyfxhqkhfgyyjilxsyp.supabase.co/rest/v1/kunstner?select=id
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14eWZ4aHFraGZneXlqaWx4c3lwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTIxMjcsImV4cCI6MjAyNjA2ODEyN30.350mDzxoRHMq4A0wyQk4cc2Fks8AFFXKxv7PEaTSbIs -->
