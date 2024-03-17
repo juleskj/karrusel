@@ -1,12 +1,56 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+
+import LayoutIndex from "../layouts/LayoutIndex.astro";
 import Buttons from "../componets/Buttons.astro";
+import Countdown from "../componets/Countdown.astro"
 ---
 
-<MainLayout title="forside"> 
-    <h2>hi</h2> 
+<LayoutIndex> 
+   <div class="forsidebilde">
+    <img src="../../public/img_karrusel/forside.png" alt="forside bilde"/>
+        <h2>KARRUSEL FESTIVAL OPENS IN</h2>
+        <Countdown />
+</div>
+  
     <Buttons variant="primary" size="desktop">Read more</Buttons>
     <Buttons variant="secondary" size="mobil">Read more</Buttons>
 
 
-</MainLayout>
+</LayoutIndex>
+
+<style>
+    .forsidebilde {
+        margin-top:-200px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+img {
+  min-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+  h2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+  }
+
+     @media (max-width: 800px) {
+   h2 {
+position: relative;
+   }
+   img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+    }
+</style>
