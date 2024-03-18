@@ -1,0 +1,43 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://mxyfxhqkhfgyyjilxsyp.supabase.co/rest/v1/kunstner",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14eWZ4aHFraGZneXlqaWx4c3lwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTIxMjcsImV4cCI6MjAyNjA2ODEyN30.350mDzxoRHMq4A0wyQk4cc2Fks8AFFXKxv7PEaTSbIs",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((artist) => {
+    return {
+      params: { slug: artist.slug },
+      props: { myData: artist },
+    };
+  });
+}
+
+const { myData } = Astro.props;
+console.log(myData);
+---
+
+<MainLayout>
+  <h2>{myData.artistName}</h2>
+
+  <h2 class="important_points">Important Info</h2>
+  <ul>
+    <li>{myData.dato}</li>
+    <li>{myData.playTime}</li>
+    <li>Country {myData.country}</li>
+    <li>Scene {myData.scene}</li>
+  </ul>
+
+  <section class="about_arist">
+    <p>{myData.whoAmI}</p>
+    <p>{myData.myMusic}</p>
+  </section>
+</MainLayout>
