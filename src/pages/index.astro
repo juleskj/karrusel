@@ -10,17 +10,58 @@ import Countdown from "../componets/Countdown.astro"
     <img src="../../public/img_karrusel/forside.png" alt="forside bilde"/>
         <h2>KARRUSEL FESTIVAL OPENS IN</h2>
         <Countdown />
-</div>
-  
-    <Buttons variant="primary" size="desktop">Read more</Buttons>
-    <Buttons variant="secondary" size="mobil">Read more</Buttons>
+          <Buttons varient="primary" size="size"><a href="line_up">Line up</a></Buttons>
+      <Buttons varient="primary" size="size"><a href="line_up">Ticket</a></Buttons>
+        <!-- <a href="path/to/line_up.astro">
+  <img class="lineup_knap" src="../../public/img_karrusel/lineup_knap.png" alt="Lineup knap">
+
+  <a href="path/to/ticket.astro">
+  <img class="ticket_knap" src="../../public/img_karrusel/ticket_knap.png" alt="Lineup knap">
+</a>
+</div> -->
+
+<!-- <div>
+    <h1>Karrusel</h1>
+    <h2 class="header_green">FESTIVAL</h2>
+</div> -->
+
+<div>
+  <div id="grid03">
+       <div id="grid03_text">
+        <h1>Karrusel</h1>
+    <h2 class="header_green">FESTIVAL</h2>
+          <p>
+            Karrusel believes in the right to a harassment-free festival experience. 
+            We believe in the right of everyone to express themselves. Karrusel welcomes 
+            everybody – all with their different orientations, experiences, histories and 
+            backgrounds. 
+            </p>
+            <p>
+  Karrusel is committed to becoming more sustainable. In order to save resources and reduce waste we use left over materials and timber for stage designs and installations. We will re-use production and print materials when possible year after year. Beverages are served in reusable or sustainable materials. Straws are not being used.</p> 
+  <div class="col_button">
+                <a class="volunteer_button" href="volunteer.astro">Read more</a>
+            </div>
+   
+  <div id="grid03_img">
+            <img src="../../public/img_karrusel/map_forside.png" alt="Map forside">
+        </div>
+            <div class="col_button">
+                <a class="map_button" href="map.astro">Go to map</a>
+            </div>
+       </div>
 
 
+
+<!-- <div>
+<img class="volunteer_index" src="../../public/img_karrusel/volunteer_index.png" alt="Volunteer forside">
+</div> -->
 </LayoutIndex>
+
+
 
 <style>
     .forsidebilde {
-        margin-top:-200px;
+  margin-top:-200px;
   display: grid;
   place-items: center;
   position: relative;
@@ -33,24 +74,100 @@ img {
   object-fit: cover;
 }
 
+ h1 {
+    position: absolute;
+    top: 120%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+  }
+
+  .header_green {
+    position: absolute;
+    top: 127%;
+    left: 20%;
+  }
+
+/* 
+.grid h2 {
+  margin-top: 5%;
+} */
+
+#grid03 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#grid03_img {
+  height: auto;
+  max-width: 10px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  /* box-shadow: 3px 3px 6px rgba(30, 30, 30, 0.2); */
+  /* border-radius: 5px; */
+}
+
+#grid03_text {
+font-family: "Hind Madurai", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: -100px;
+  margin-right: 50px;
+  /* margin-top: px; */
+  margin-bottom: -20px;
+}
+
+
+ 
+
   h2 {
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    color: #fff;
+    padding-bottom: 40px;
   }
 
-     @media (max-width: 800px) {
+  .lineup_knap {
+margin-left: -310%;
+margin-top: -230%;
+width: 150px;
+height: auto;
+  }
+
+  .ticket_knap {
+margin-left: 310%;
+margin-top: -230%;
+width: 150px;
+height: auto;
+  }
+
+
+@media (max-width: 800px) {
    h2 {
 position: relative;
    }
    img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+.lineup_knap {
+width: 100px;
+height: auto;
+margin-left: -130%;
+margin-top: 230%;
+}
+
+.ticket_knap {
+width: 100px;
+height: auto;
+margin-left: 130%;
+margin-top: -53%;
 }
     }
 </style>
