@@ -1,0 +1,49 @@
+---
+const {hero_img ,hero_tekst, hero_tekst_green} = Astro.props; 
+---
+
+<div class="billede_med_tekst">
+    <img src= {hero_img} alt="Hero image" />
+    <h1>{hero_tekst}</h1>
+    <h2 class="header_green">{hero_tekst_green}</h2>
+  </div>
+
+  <style>
+
+    .main_luft{
+        padding: 20px;
+      }
+    
+        /* Billede med tekst */
+    .billede_med_tekst {
+      display: grid;
+      place-items: center;
+      position: relative;
+      padding-bottom: 50px;
+    }
+    img {
+      width: 100%;
+      max-height: 600px;
+      height: auto;
+      display: block;
+      object-fit: cover; 
+      min-width: 100%;
+    }
+    
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: #fff;
+    }
+
+    .header_green {
+    position: absolute;
+    top: 52%;
+    left: 52%;
+  }
+    
+      </style>
+    
