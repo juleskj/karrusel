@@ -1,0 +1,99 @@
+---
+import SingleveiwLayout from "../../layouts/SingleveiwLayout.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://mxyfxhqkhfgyyjilxsyp.supabase.co/rest/v1/kunstner",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14eWZ4aHFraGZneXlqaWx4c3lwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTIxMjcsImV4cCI6MjAyNjA2ODEyN30.350mDzxoRHMq4A0wyQk4cc2Fks8AFFXKxv7PEaTSbIs",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((artist) => {
+    return {
+      params: { slug: artist.slug },
+      props: { myData: artist },
+    };
+  });
+}
+
+const { myData } = Astro.props;
+
+console.log(myData);
+---
+
+<SingleveiwLayout title={myData.artistName}>
+  <section class="image_info">
+    <div class="text_on_image">
+      <h2 class="artist_name">{myData.artistName}</h2>
+      <img
+        class="card-image"
+        src={"/img_karrusel/" + myData.image}
+        alt={"image of " + myData.artistName}
+      />
+    </div>
+    <section class="info">
+      <h2 class="header_green">Important Info</h2>
+      <ul class="important_points">
+        <li>{myData.dato}</li>
+        <li>{myData.playTime}</li>
+        <li>Country {myData.country}</li>
+        <li>Scene {myData.scene}</li>
+      </ul>
+    </section>
+  </section>
+
+  <section class="about_arist">
+    <h3>Who am i?</h3>
+    <p>{myData.whoAmI}</p>
+    <h3>My music</h3>
+    <p>{myData.myMusic}</p>
+  </section>
+</SingleveiwLayout>
+
+<style>
+  h3 {
+    padding: 25px 0 10px 0;
+  }
+
+  img {
+    width: 100%;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    border-radius: 10px;
+  }
+
+  .artist_name {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    align-self: end;
+    text-align: start;
+    z-index: 1;
+    padding-left: 10px;
+  }
+  .text_on_image {
+    display: grid;
+    padding-bottom: 50px;
+    padding: 10px;
+  }
+
+  ul {
+    padding: 30px;
+  }
+
+  .info,
+  .about_arist {
+    padding: 10px;
+  }
+
+  @media (min-width: 800px) {
+    .image_info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
