@@ -26,7 +26,7 @@ const { myData } = Astro.props;
 console.log(myData);
 ---
 
-<SingleveiwLayout>
+<SingleveiwLayout title={myData.artistName}>
   <section class="image_info">
     <div class="text_on_image">
       <h2 class="artist_name">{myData.artistName}</h2>
