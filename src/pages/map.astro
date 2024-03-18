@@ -1,5 +1,79 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Buttons from "../componets/Buttons.astro";
 ---
 
-<MainLayout title="Kort"> <h2>hi</h2> </MainLayout>
+<MainLayout>
+<div class="overskrift_map">
+    <div class="grid_1_1">
+    <div class="h1_map">
+    <h1>Map</h1>
+</div>
+    <div class="map_billede">
+<img src="img_karrusel/map.svg" alt="map">
+</div>
+<div class="ikoner_map">
+<img src="img_karrusel/ikoner.svg" alt="ikoner">
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+</MainLayout>
+
+
+<style>
+
+.overskrift_map{
+background-color:  #332168;
+
+}
+.map_billede{
+   padding-right: 250px;
+    padding-bottom: 30px;
+    padding-top: 90px;
+}
+.h1_map{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.grid_1_1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+}
+.ikoner_map{
+    width: 100px;
+   margin-left: -250%;
+   padding-top: 20px;
+
+}
+
+
+@media (max-width: 1150px) {
+    .grid_1_1{
+    display: grid;
+    grid-template-columns: 1fr;
+   
+}
+.ikoner_map{
+    width: 100px;
+   
+
+}
+.map_billede {
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        width: 100%; /* Tilpas bredden til forælderens bredde */
+        max-width: 100%; /* Sørg for, at billedet ikke overstiger den maksimale bredde */
+        height: auto; /* Lad højden justere sig selv for at bevare billedets proportioner */
+    }
+
+</style>
