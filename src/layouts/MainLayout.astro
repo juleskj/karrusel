@@ -3,6 +3,7 @@ const { title } = Astro.props;
 import Header from "../componets/Header.astro";
 import Footer from "../componets/Footer.astro";
 import Hero from "../componets/Hero.astro";
+const { hero_img, hero_tekst, hero_tekst_green } = Astro.props;
 ---
 
 <html lang="en">
@@ -26,9 +27,12 @@ import Hero from "../componets/Hero.astro";
   </head>
   <body>
     <Header />
-    <Hero />
-        <main>
-      <h1>{title}</h1>
+    <div class="billede_med_tekst">
+      <img src={hero_img} alt="Hero image" class="hero_img" />
+      <h1 class="hero_tekst">{hero_tekst}</h1>
+      <h2 class="header_green">{hero_tekst_green}</h2>
+    </div>
+    <main>
       <slot />
     </main>
     <Footer />
@@ -49,5 +53,40 @@ import Hero from "../componets/Hero.astro";
   main {
     min-height: 100vh;
     padding-bottom: 100px;
+  }
+
+  .main_luft {
+    padding: 20px;
+  }
+
+  /* Billede med tekst */
+  .billede_med_tekst {
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding-bottom: 50px;
+  }
+  .hero_img {
+    width: 100%;
+    max-height: 600px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    min-width: 100%;
+  }
+
+  .hero_tekst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+  }
+
+  .header_green {
+    position: absolute;
+    top: 52%;
+    left: 52%;
   }
 </style>
