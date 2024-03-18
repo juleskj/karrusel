@@ -3,43 +3,82 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Buttons from "../componets/Buttons.astro";
 ---
 
-<MainLayout>
-   
+<MainLayout hero_img="img_karrusel/frivillig_figma.png" hero_tekst="Volunteer">
   <div class="main_luft">
-  <h2>Our principles</h2>
-<section>
-  <p>Volunteering at a festival is a vibrant tapestry woven with threads of camaraderie, dedication, and the sheer joy of contributing to a shared experience. Festivals, whether celebrating music, culture, or art, thrive on the energy and passion of volunteers who dedicate their time and efforts to ensure the event's success.</p>
-  <p>Principles such as collaboration and teamwork form the foundation of successful festival volunteering. Volunteers often find themselves working in diverse teams, each member bringing their unique skills and perspectives to the table. This collaborative approach not only enhances the efficiency of the festival operations but also enriches the overall experience for both volunteers and attendees.</p>
-</section>
+    <h2>Our principles</h2>
+    <section>
+      <p>
+        Volunteering at a festival is a vibrant tapestry woven with threads of
+        camaraderie, dedication, and the sheer joy of contributing to a shared
+        experience. Festivals, whether celebrating music, culture, or art,
+        thrive on the energy and passion of volunteers who dedicate their time
+        and efforts to ensure the event's success.
+      </p>
+      <p>
+        Principles such as collaboration and teamwork form the foundation of
+        successful festival volunteering. Volunteers often find themselves
+        working in diverse teams, each member bringing their unique skills and
+        perspectives to the table. This collaborative approach not only enhances
+        the efficiency of the festival operations but also enriches the overall
+        experience for both volunteers and attendees.
+      </p>
+    </section>
 
-<div class="article_grid">
-  <article class="bar_grid">
-      <h2>Volunteer bar and food truck crew</h2>
-      <p>Join the festival fun by becoming a volunteer at the bars and food trucks! It's a fantastic way to be part of the excitement and contribute to the vibrant atmosphere. As a volunteer, you'll help serve drinks or delicious bites, ensuring everyone has a great time. No experience is needed – just bring your positive energy and willingness to help. It's a chance to make new friends, soak in the festival vibes, and be a key player in creating an unforgettable experience for all!</p>
-  </article>
-  
-  <article>
-      <h2>Volunteer clean up crew</h2>
-      <p>Join the clean-up crew and be a festival hero! As a volunteer, you'll help keep the festival grounds tidy by picking up litter. It's a chance to make a meaningful impact and be part of a fantastic team. Ready to create a spotless and unforgettable festival experience? Sign up now!</p>
-  </article>
-  
-  <article>
-      <h2>Volunteer security crew</h2>
-      <p>Join the volunteer security team and play a crucial role in ensuring a safe and enjoyable experience for all. As a security volunteer, you'll contribute to maintaining a secure environment, assisting festival-goers, and adding to the positive vibes.</p>
-  </article>
-  
-  <article class="stage_grid">
-      <h2>Volunteer stage building crew 
-          - Pre festival</h2>
-          <p>Join the volunteer stage-building team and be a part of creating the magic before the event kicks off. No previous construction experience required – just bring your passion and eagerness to contribute. As a volunteer, you'll be instrumental in assembling stages, organizing equipment, and ensuring everything is set up for an unforgettable festival experience. Ready to be a vital part of the stage-building crew? Sign up now and let's craft an extraordinary festival together!</p>
-  </article>
-</div>
+    <div class="article_grid">
+      <article class="bar_grid">
+        <h2>Volunteer bar and food truck crew</h2>
+        <p>
+          Join the festival fun by becoming a volunteer at the bars and food
+          trucks! It's a fantastic way to be part of the excitement and
+          contribute to the vibrant atmosphere. As a volunteer, you'll help
+          serve drinks or delicious bites, ensuring everyone has a great time.
+          No experience is needed – just bring your positive energy and
+          willingness to help. It's a chance to make new friends, soak in the
+          festival vibes, and be a key player in creating an unforgettable
+          experience for all!
+        </p>
+      </article>
 
-<div class="form">
-  <h2 class="forms_h2">Hold yourself updated with a newsletter!</h2>
+      <article>
+        <h2>Volunteer clean up crew</h2>
+        <p>
+          Join the clean-up crew and be a festival hero! As a volunteer, you'll
+          help keep the festival grounds tidy by picking up litter. It's a
+          chance to make a meaningful impact and be part of a fantastic team.
+          Ready to create a spotless and unforgettable festival experience? Sign
+          up now!
+        </p>
+      </article>
 
-  <form>
-    <!--<label for="Name"></label>
+      <article>
+        <h2>Volunteer security crew</h2>
+        <p>
+          Join the volunteer security team and play a crucial role in ensuring a
+          safe and enjoyable experience for all. As a security volunteer, you'll
+          contribute to maintaining a secure environment, assisting
+          festival-goers, and adding to the positive vibes.
+        </p>
+      </article>
+
+      <article class="stage_grid">
+        <h2>Volunteer stage building crew - Pre festival</h2>
+        <p>
+          Join the volunteer stage-building team and be a part of creating the
+          magic before the event kicks off. No previous construction experience
+          required – just bring your passion and eagerness to contribute. As a
+          volunteer, you'll be instrumental in assembling stages, organizing
+          equipment, and ensuring everything is set up for an unforgettable
+          festival experience. Ready to be a vital part of the stage-building
+          crew? Sign up now and let's craft an extraordinary festival together!
+        </p>
+      </article>
+    </div>
+
+    <div class="form">
+      <h2 class="forms_h2">Hold yourself updated with a newsletter!</h2>
+
+      <form>
+        <!--<label for="Name"></label>
     <input type="text" required placeholder="Name:">
     <label for="telNo"></label>
     <input type="tel" id="phone" name="phone" required placeholder="Tlf:" />
@@ -54,81 +93,101 @@ import Buttons from "../componets/Buttons.astro";
     /><br />
     <textarea name="comment" form="usrform">Enter text here...</textarea>
     <input type="text" placeholder="Message:">-->
-<div class="forms_grid">
-<label for="Name">Name:</label>
-<input type="text" id="Name" name="Name" required placeholder="Name:">
-<label for="phone">Tlf:</label>
-<input type="tel" id="phone" name="phone" required placeholder="Tlf:" />
-</div>
-    <label for="Email">Email:</label>
-    <input type="email" id="Email" name="Email" required placeholder="Email:" />
-    <textarea id="message" name="message" form="usrform" placeholder="Message:"></textarea>
+        <div class="forms_grid">
+          <label for="Name">Name:</label>
+          <input
+            type="text"
+            id="Name"
+            name="Name"
+            required
+            placeholder="Name:"
+          />
+          <label for="phone">Tlf:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="Tlf:"
+          />
+        </div>
+        <label for="Email">Email:</label>
+        <input
+          type="email"
+          id="Email"
+          name="Email"
+          required
+          placeholder="Email:"
+        />
+        <textarea
+          id="message"
+          name="message"
+          form="usrform"
+          placeholder="Message:"></textarea>
 
-    <Buttons variant="primary" size="size">Send </Buttons>
-  </form>
-</div>
+        <Buttons variant="primary" size="size">Send </Buttons>
+      </form>
+    </div>
   </div>
-  
 </MainLayout>
 
 <style>
-
-.main_luft{
+  .main_luft {
     padding: 20px;
   }
 
-    /* Billede med tekst */
-.billede_med_tekst {
-  display: grid;
-  place-items: center;
-  position: relative;
-  padding-bottom: 50px;
-}
-img {
-  width: 100%;
-  max-height: 600px;
-  height: auto;
-  display: block;
-  object-fit: cover; 
-  min-width: 100%;
-}
+  /* Billede med tekst */
+  .billede_med_tekst {
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding-bottom: 50px;
+  }
+  img {
+    width: 100%;
+    max-height: 600px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    min-width: 100%;
+  }
 
-h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  color: #fff;
-}
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+  }
 
-    h2{
-        padding-bottom: 20px;
-    }
+  h2 {
+    padding-bottom: 20px;
+  }
 
-    article{
-        background-color: var(--lillatekstcard);
-        padding: 30px;
-        border-radius: 10px;
-    }
+  article {
+    background-color: var(--lillatekstcard);
+    padding: 30px;
+    border-radius: 10px;
+  }
 
-    section{
-        display: grid;
-    gap: 20px;  
-    }
-
-    .article_grid{
-        display: grid;
+  section {
+    display: grid;
     gap: 20px;
-    padding-top: 100px;   
-    }
+  }
 
-    .forms_h2{
-      padding-top: 100px;
-    }
+  .article_grid {
+    display: grid;
+    gap: 20px;
+    padding-top: 100px;
+  }
 
-    /******************** Forms *********************/
-    form {
+  .forms_h2 {
+    padding-top: 100px;
+  }
+
+  /******************** Forms *********************/
+  form {
     padding-bottom: 50px;
   }
   input {
@@ -137,7 +196,7 @@ h1 {
     margin: 5px;
     width: 100%;
   }
-  textarea{
+  textarea {
     box-sizing: border-box;
     padding: 5px;
     margin: 5px;
@@ -157,34 +216,33 @@ h1 {
     display: none;
   }
   @media (min-width: 800px) {
-
-    .main_luft{
-    padding: 0;
-  }
-
-    section{
-        display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;  
+    .main_luft {
+      padding: 0;
     }
 
-    .article_grid{
-        display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding-top: 100px;   
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
-    .bar_grid{
-        grid-column: 1/3;
+    .article_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding-top: 100px;
     }
 
-    .stage_grid{
-        grid-row: 2/3;
-        grid-column: 2/4;
+    .bar_grid {
+      grid-column: 1/3;
     }
 
-        /******************** Forms *********************/
+    .stage_grid {
+      grid-row: 2/3;
+      grid-column: 2/4;
+    }
+
+    /******************** Forms *********************/
     .form {
       padding-bottom: 0;
 
@@ -196,27 +254,26 @@ h1 {
     input {
       height: 40px;
     }
-    textarea{
-    height: 150px;
-  }
+    textarea {
+      height: 150px;
+    }
 
-  .forms_grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
+    .forms_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
 
-  input[id="Name"] {
-    border-radius: 10px 0 0 0;
-  }
+    input[id="Name"] {
+      border-radius: 10px 0 0 0;
+    }
 
-  input[id="phone"] {
-    border-radius: 0 10px 0 0;
-  }
+    input[id="phone"] {
+      border-radius: 0 10px 0 0;
+    }
 
-  textarea[id="message"] {
-    border-radius: 0 0 10px 10px;
+    textarea[id="message"] {
+      border-radius: 0 0 10px 10px;
+    }
   }
-  }
-
-  </style>
+</style>
