@@ -34,6 +34,11 @@ a {
   font-family: "Hind Madurai", sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: var(--accentgreen);
+}
+
+a:hover {
+  color: var(--hovergreen);
 }
 
 /********** H2, H3, H4, menu li ***********/
