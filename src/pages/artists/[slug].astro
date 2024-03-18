@@ -1,5 +1,5 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
+import SingleveiwLayout from "../../layouts/SingleveiwLayout.astro";
 
 export async function getStaticPaths() {
   const data = await fetch(
@@ -22,22 +22,78 @@ export async function getStaticPaths() {
 }
 
 const { myData } = Astro.props;
+
 console.log(myData);
 ---
 
-<MainLayout>
-  <h2>{myData.artistName}</h2>
-
-  <h2 class="important_points">Important Info</h2>
-  <ul>
-    <li>{myData.dato}</li>
-    <li>{myData.playTime}</li>
-    <li>Country {myData.country}</li>
-    <li>Scene {myData.scene}</li>
-  </ul>
+<SingleveiwLayout>
+  <section class="image_info">
+    <div class="text_on_image">
+      <h2 class="artist_name">{myData.artistName}</h2>
+      <img
+        class="card-image"
+        src={"/img_karrusel/" + myData.image}
+        alt={"image of " + myData.artistName}
+      />
+    </div>
+    <section class="info">
+      <h2 class="header_green">Important Info</h2>
+      <ul class="important_points">
+        <li>{myData.dato}</li>
+        <li>{myData.playTime}</li>
+        <li>Country {myData.country}</li>
+        <li>Scene {myData.scene}</li>
+      </ul>
+    </section>
+  </section>
 
   <section class="about_arist">
+    <h3>Who am i?</h3>
     <p>{myData.whoAmI}</p>
+    <h3>My music</h3>
     <p>{myData.myMusic}</p>
   </section>
-</MainLayout>
+</SingleveiwLayout>
+
+<style>
+  h3 {
+    padding: 25px 0 10px 0;
+  }
+
+  img {
+    width: 100%;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    border-radius: 10px;
+  }
+
+  .artist_name {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    align-self: end;
+    text-align: start;
+    z-index: 1;
+    padding-left: 10px;
+  }
+  .text_on_image {
+    display: grid;
+    padding-bottom: 50px;
+    padding: 10px;
+  }
+
+  ul {
+    padding: 30px;
+  }
+
+  .info,
+  .about_arist {
+    padding: 10px;
+  }
+
+  @media (min-width: 800px) {
+    .image_info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
