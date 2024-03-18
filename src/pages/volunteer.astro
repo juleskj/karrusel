@@ -42,6 +42,11 @@ import Buttons from "../componets/Buttons.astro";
     <h2>Hold yourself updated with a newsletter!</h2>
 
     <form>
+      <!--<label for="Name"></label>
+      <input type="text" required placeholder="Name:">
+      <label for="telNo"></label>
+      <input type="tel" id="phone" name="phone" required placeholder="Tlf:" />
+      <br />
       <label for="Email"></label>
       <input
         type="text"
@@ -50,8 +55,21 @@ import Buttons from "../componets/Buttons.astro";
         required
         placeholder="Email:"
       /><br />
-      <label for="telNo"></label>
+      <textarea name="comment" form="usrform">Enter text here...</textarea>
+      <input type="text" placeholder="Message:">-->
+
+      <label for="Name">Name:</label>
+      <input type="text" id="Name" name="Name" required placeholder="Name:">
+      <br />
+      <label for="phone">Tlf:</label>
       <input type="tel" id="phone" name="phone" required placeholder="Tlf:" />
+      <br />
+      <label for="Email">Email:</label>
+      <input type="email" id="Email" name="Email" required placeholder="Email:" />
+      <br />
+      <textarea id="comment" name="comment" form="usrform" placeholder="Message:"></textarea>
+      <br />
+  
       <Buttons variant="primary" size="size">Send </Buttons>
     </form>
   </div>
@@ -124,6 +142,13 @@ h1 {
     margin: 5px;
     width: 100%;
   }
+  textarea{
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+    height: 150px;
+  }
 
   input[id="Email"] {
     border-radius: 10px 10px 0 0;
@@ -149,6 +174,9 @@ h1 {
     input {
       height: 40px;
     }
+    textarea{
+    height: 150px;
+  }
   }
 
   </style>
