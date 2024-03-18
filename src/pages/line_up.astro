@@ -16,20 +16,37 @@ const data = await fetch(
 });
 ---
 
-<MainLayout title="Line up">
-  <section class="line_up">
-    {
-      data.map((artist) => {
-        return <Card data={artist} />;
-      })
-    }
-  </section>
+<MainLayout>
+  <div class="main_luft">
+    <h1 class="h1_line_up_luft">Line up</h1>
+    <section class="line_up">
+      {
+        data.map((artist) => {
+          return <Card data={artist} />;
+        })
+      }
+    </section>
+  </div>
 </MainLayout>
 
 <style>
+  .main_luft{
+padding: 20px;
+}
+
+.h1_line_up_luft{
+  padding-bottom: 50px;
+}
   .line_up {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 40px;
+  }
+
+  @media (min-width: 800px) {
+
+.main_luft{
+padding: 0;
+}
   }
 </style>

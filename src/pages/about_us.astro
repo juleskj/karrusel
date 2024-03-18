@@ -10,8 +10,9 @@ import Buttons from "../componets/Buttons.astro";
     <h2 class="header_green">Karrusel</h2>
   </div>
 
-  <h2>Festival experience History</h2>
-  <section class="top_section">
+  <article class="top_section">
+    <h2>Festival experience</h2>
+
     <p>
       Karrusel believes in the right to a harassment-free festival experience.
       We believe in the right of everyone to express themselves. Karrusel
@@ -29,7 +30,7 @@ import Buttons from "../componets/Buttons.astro";
       Take responsibility for your own actions. Respect your own and others
       boundaries. Speak up rather than look the other way
     </p>
-  </section>
+  </article>
 
   <div class="article_grid">
     <article class="bar_grid">
@@ -120,7 +121,7 @@ import Buttons from "../componets/Buttons.astro";
     padding-bottom: 50px;
   }
   img {
-    min-width: 100%;
+    width: 100%;
     max-height: 600px;
     height: auto;
     display: block;
@@ -154,12 +155,12 @@ import Buttons from "../componets/Buttons.astro";
 
   .article_grid {
     gap: 20px;
-    padding-top: 50px;
   }
 
   .top_section {
     padding: 10px;
   }
+
   @media (min-width: 800px) {
     article {
       padding: 30px;
@@ -175,7 +176,7 @@ import Buttons from "../componets/Buttons.astro";
     .article_grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      padding-top: 100px;
+      padding-top: 20px;
     }
 
     .bar_grid {
