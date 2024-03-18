@@ -12,7 +12,7 @@ const { data } = Astro.props;
   <h3>{data.artistName}</h3>
   <h4>{data.dato}</h4>
   <p>Country: {data.country}</p>
-  <span>spotify</span>
+  <span></span>
   <a href={`artists/${data.slug}`}>Read more</a>
 </article>
 
@@ -21,8 +21,8 @@ const { data } = Astro.props;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     background-color: var(--lillacard);
+    gap: 15px;
   }
 
   img {
@@ -54,6 +54,15 @@ const { data } = Astro.props;
   a {
     grid-column: span 2;
     padding: 20px;
+  }
+
+  span {
+    display: border-box;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/public/img_karrusel/sportify_hvid.svg);
   }
 
   /*.card-gradient-overlay {
