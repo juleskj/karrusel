@@ -1,7 +1,7 @@
 ---
 
 import LayoutIndex from "../layouts/LayoutIndex.astro";
-import Buttons from "../componets/Buttons.astro";
+import IndexButtons from "../componets/IndexButtons.astro";
 import Countdown from "../componets/Countdown.astro"
 ---
 
@@ -10,8 +10,11 @@ import Countdown from "../componets/Countdown.astro"
     <img src="../../public/img_karrusel/forside.png" alt="forside bilde"/>
         <h2>KARRUSEL FESTIVAL OPENS IN</h2>
         <Countdown />
-          <Buttons varient="primary" size="size"><a href="line_up">Line up</a></Buttons>
-      <Buttons varient="primary" size="size"><a href="line_up">Ticket</a></Buttons>
+        <div class="knapper_forside">
+          <IndexButtons class="lineup_knap" variant="primary" size="size"><a href="line_up">Lineup</a></IndexButtons>
+      <IndexButtons class="ticket_knap" variant="primary" size="size"><a href="ticket">Tickets</a></IndexButtons>
+   </div>
+  </div>
         <!-- <a href="path/to/line_up.astro">
   <img class="lineup_knap" src="../../public/img_karrusel/lineup_knap.png" alt="Lineup knap">
 
@@ -20,20 +23,15 @@ import Countdown from "../componets/Countdown.astro"
 </a>
 </div> -->
 
-<!-- <div>
-    <h1>Karrusel</h1>
-    <h2 class="header_green">FESTIVAL</h2>
-</div> -->
-
 <div>
-  <div id="grid03">
-       <div id="grid03_text">
+  <div class="grid03">
+       <div class="grid03_text">
         <h1>Karrusel</h1>
     <h2 class="header_green">FESTIVAL</h2>
           <p>
             Karrusel believes in the right to a harassment-free festival experience. 
             We believe in the right of everyone to express themselves. Karrusel welcomes 
-            everybody – all with their different orientations, experiences, histories and 
+            everybody, all with their different orientations, experiences, histories and 
             backgrounds. 
             </p>
             <p>
@@ -42,13 +40,12 @@ import Countdown from "../componets/Countdown.astro"
                 <a class="volunteer_button" href="volunteer.astro">Read more</a>
             </div>
    
-  <div id="grid03_img">
+  <div class="grid03_img">
             <img src="../../public/img_karrusel/map_forside.png" alt="Map forside">
         </div>
-            <div class="col_button">
-                <a class="map_button" href="map.astro">Go to map</a>
-            </div>
+         <div><IndexButtons variant="secondary" size="size"><a href="map">Map</a></IndexButtons>
        </div>
+  </div>
 
 
 
@@ -76,7 +73,7 @@ img {
 
  h1 {
     position: absolute;
-    top: 120%;
+    top: 110%;
     left: 13%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -85,21 +82,17 @@ img {
 
   .header_green {
     position: absolute;
-    top: 127%;
+    top: 117%;
     left: 20%;
   }
 
-/* 
-.grid h2 {
-  margin-top: 5%;
-} */
-
-#grid03 {
+.grid03 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
 }
 
-#grid03_img {
+.grid03_img {
   height: auto;
   max-width: 10px;
   margin-top: 60px;
@@ -108,28 +101,35 @@ img {
   /* border-radius: 5px; */
 }
 
-#grid03_text {
+.grid03_text {
 font-family: "Hind Madurai", sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-left: -100px;
   margin-right: 50px;
-  /* margin-top: px; */
+  margin-top: 50px;
   margin-bottom: -20px;
 }
 
+.knapper_forside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  gap: 850px;
+  padding-top: 400px;
+}
 
  
 
   h2 {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     padding-bottom: 40px;
   }
-
+/* 
   .lineup_knap {
 margin-left: -310%;
 margin-top: -230%;
@@ -142,7 +142,7 @@ margin-left: 310%;
 margin-top: -230%;
 width: 150px;
 height: auto;
-  }
+  } */
 
 
 @media (max-width: 800px) {
@@ -156,7 +156,7 @@ position: relative;
   object-fit: cover;
 }
 
-.lineup_knap {
+/* .lineup_knap {
 width: 100px;
 height: auto;
 margin-left: -130%;
@@ -168,6 +168,6 @@ width: 100px;
 height: auto;
 margin-left: 130%;
 margin-top: -53%;
-}
+} */
     }
 </style>
