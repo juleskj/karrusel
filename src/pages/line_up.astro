@@ -17,6 +17,7 @@ const data = await fetch(
 ---
 
 <MainLayout title="Line up">
+  <div class="karrusel_bogstav">
   <div class="main_luft">
     <h1 class="h1_line_up_luft">Line up</h1>
     <section class="line_up">
@@ -27,6 +28,7 @@ const data = await fetch(
       }
     </section>
   </div>
+</div>
 </MainLayout>
 
 <style>
@@ -47,5 +49,10 @@ const data = await fetch(
     .main_luft {
       padding: 0;
     }
-  }
+
+    .karrusel_bogstav{
+background-image: url(../../public/img_karrusel/karusel_bogstav_bagrund.svg);
+width: 100%;
+
+    }
 </style>
