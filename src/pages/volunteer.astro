@@ -76,7 +76,7 @@ import Buttons from "../componets/Buttons.astro";
 
 <style>
 
-  .main_luft{
+.main_luft{
     padding: 20px;
   }
 
@@ -93,6 +93,7 @@ img {
   height: auto;
   display: block;
   object-fit: cover; 
+  min-width: 100%;
 }
 
 h1 {
@@ -159,6 +160,10 @@ h1 {
     display: none;
   }
   @media (min-width: 800px) {
+
+    .main_luft{
+    padding: 0;
+  }
 
     section{
         display: grid;
