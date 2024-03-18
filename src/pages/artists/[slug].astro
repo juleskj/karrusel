@@ -16,42 +16,42 @@ export async function getStaticPaths() {
   return data.map((artist) => {
     return {
       params: { slug: artist.slug },
-      props: { myData: artist },
+      props: { artist },
     };
   });
 }
 
-const { myData } = Astro.props;
+const { artist } = Astro.props;
 
-console.log(myData);
+console.log(artist);
 ---
 
-<SingleveiwLayout title={myData.artistName}>
+<SingleveiwLayout title={artist.artistName}>
   <section class="image_info">
     <div class="text_on_image">
-      <h2 class="artist_name">{myData.artistName}</h2>
+      <h2 class="artist_name">{artist.artistName}</h2>
       <img
         class="card-image"
-        src={"/img_karrusel/" + myData.image}
-        alt={"image of " + myData.artistName}
+        src={"/img_karrusel/" + artist.image}
+        alt={"image of " + artist.artistName}
       />
     </div>
     <section class="info">
       <h2 class="header_green">Important Info</h2>
       <ul class="important_points">
-        <li>{myData.dato}</li>
-        <li>{myData.playTime}</li>
-        <li>Country {myData.country}</li>
-        <li>Scene {myData.scene}</li>
+        <li>{artist.dato}</li>
+        <li>{artist.playTime}</li>
+        <li>Country {artist.country}</li>
+        <li>Scene {artist.scene}</li>
       </ul>
     </section>
   </section>
 
   <section class="about_arist">
     <h3>Who am i?</h3>
-    <p>{myData.whoAmI}</p>
+    <p>{artist.whoAmI}</p>
     <h3>My music</h3>
-    <p>{myData.myMusic}</p>
+    <p>{artist.myMusic}</p>
   </section>
 </SingleveiwLayout>
 
