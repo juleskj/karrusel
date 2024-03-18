@@ -1,5 +1,5 @@
 ---
-import SingleveiwLayout from "../../layouts/SingleveiwLayout.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
   const data = await fetch(
@@ -26,7 +26,7 @@ const { artist } = Astro.props;
 console.log(artist);
 ---
 
-<SingleveiwLayout title={artist.artistName}>
+<MainLayout title={artist.artistName}>
   <section class="image_info">
     <div class="text_on_image">
       <h2 class="artist_name">{artist.artistName}</h2>
@@ -53,7 +53,7 @@ console.log(artist);
     <h3>My music</h3>
     <p>{artist.myMusic}</p>
   </section>
-</SingleveiwLayout>
+</MainLayout>
 
 <style>
   h3 {
