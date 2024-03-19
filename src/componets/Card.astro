@@ -20,7 +20,7 @@ const { data } = Astro.props;
       </span>
     )
   }
-  <a class="a" href={`/artists/${data.slug}`}>Learn more</a>
+  <a class="a" href={`/artists/${data.slug}`}>Learn about the artist</a>
 </article>
 
 <style>
@@ -61,7 +61,7 @@ const { data } = Astro.props;
   }
 
   a {
-    grid-column: span 2;
+    grid-column: span 3;
     padding: 20px;
   }
 
