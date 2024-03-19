@@ -21,7 +21,8 @@ const data = await fetch(
   <div class="main_luft">
     <h1 class="h1_line_up_luft">Line up</h1>
     <section class="line_up">
-      {
+      { //map bliver brugt til at køre igennem vores data og for hver gang vi 
+      //har noget data så retunere den noget data i vores card.
         data.map((artist) => {
           return <Card data={artist} />;
         })
