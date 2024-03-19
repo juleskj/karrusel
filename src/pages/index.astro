@@ -1,238 +1,225 @@
 ---
-
 import LayoutIndex from "../layouts/LayoutIndex.astro";
 import Buttons from "../componets/IndexButtons.astro";
-import Countdown from "../componets/Countdown.astro"
+import Countdown from "../componets/Countdown.astro";
 ---
 
-<LayoutIndex> 
-   <div class="forsidebilde">
-    <img src="../../public/img_karrusel/forside.png" alt="forside bilde"/>
-        <h2 class="karrusel_header">KARRUSEL FESTIVAL OPENS IN</h2>
-        <Countdown />
-        <div class="knapper_forside">
-          <Buttons class="lineup_knap" variant="primary" size="size"><a href="line_up">Lineup</a></Buttons>
+<LayoutIndex>
+  <div class="forsidebilde">
+    <img src="../../public/img_karrusel/forside.png" alt="forside bilde" />
+    <h2 class="karrusel_header">KARRUSEL FESTIVAL OPENS IN</h2>
+    <Countdown />
+    <div class="knapper_forside">
+      <Buttons class="lineup_knap" variant="primary" size="size"><a href="line_up">Lineup</a></Buttons>
       <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Tickets</a></Buttons>
-   </div>
-   </div>
-       
-  <div class="karrusel">
-  <h1 class="karrusel_1">Karrusel</h1>
-    <h2 class="header_green">FESTIVAL</h2>
-</div>
-  <div class="grid02">   
-       <div class="grid02_text">
-          <p>
-            Karrusel believes in the right to a harassment-free festival experience. 
-            We believe in the right of everyone to express themselves. Karrusel welcomes 
-            everybody, all with their different orientations, experiences, histories and 
-            backgrounds. 
-            </p>
-            <p>
-  Karrusel is committed to becoming more sustainable. In order to save resources and reduce 
-  waste we use left over materials and timber for stage designs and installations. We will re-use 
-  production and print materials when possible year after year. Beverages are served in reusable 
-  or sustainable materials. Straws are not being used.</p> 
-   <div class="col_button">
-                <a class="volunteer_button" href="volunteer.astro">Read more</a>
-            </div>
-
-   </div> 
-  
-  <div class="grid02_img">
-            <img class="map_img" src="../../public/img_karrusel/map_forside.png" alt="Map forside">
-        </div>
-         <div class="mapknap"><Buttons variant="secondary" size="size"><a href="map">Map</a></Buttons>
-       </div>
- 
- 
-  <div class="grid03">
-    <div class="grid03_img">
-    <img class="volunteer_forside" src="../../public/img_karrusel/volunteer_index.png" alt="volunteer forside">
- </div>
-<div class="grid03_text">
-    <h2>Volunteer</h2>
-    <p>
-      Embark on a unique adventure and be the heartbeat of the festival as a volunteer! 
-      Joining our vibrant team offers you the chance to play a pivotal role in creating 
-      unforgettable moments—all for free! No special skills are required – just bring your 
-      energy, enthusiasm, and passion for making a difference. Whether you're interested 
-      in tending bars, managing cleanup efforts, ensuring security, or helping with stage building, 
-      there's a place for you. Dive into the festival spirit, forge new friendships, and contribute 
-      to the magic that makes our event extraordinary. Ready to join the festival family? Sign 
-      up now and let the excitement begin!
-    </p> 
+    </div>
   </div>
-   </div>
 
-</LayoutIndex>
+  <div class="karrusel">
+    <h1 class="karrusel_1">Karrusel</h1>
+    <h2 class="header_green">FESTIVAL</h2>
+  </div>
+  <div class="grid02">
+    <div class="grid02_text">
+      <p>Karrusel believes in the right to a harassment-free festival experience. We believe in the right of everyone to express themselves. Karrusel welcomes everybody, all with their different orientations, experiences, histories and backgrounds.</p>
+      <p>Karrusel is committed to becoming more sustainable. In order to save resources and reduce waste we use left over materials and timber for stage designs and installations. We will re-use production and print materials when possible year after year. Beverages are served in reusable or sustainable materials. Straws are not being used.</p>
+      <div class="col_button">
+        <a class="a" href="volunteer.astro">Read more</a>
+      </div>
+    </div>
 
+    <div class="grid02_img">
+      <img class="map_img" src="../../public/img_karrusel/map_forside.png" alt="Map forside" />
+    </div>
+    <div class="mapknap"><Buttons variant="secondary" size="size"><a href="map">Map</a></Buttons></div>
 
+    <div class="grid03">
+      <div class="grid03_img">
+        <img class="volunteer_forside" src="../../public/img_karrusel/volunteer_index.png" alt="volunteer forside" />
+      </div>
 
-<style>
+      <h2 class="overskrift">Volunteer</h2>
+      <div class="grid03_text">
+        <p>Embark on a unique adventure and be the heartbeat of the festival as a volunteer! Joining our vibrant team offers you the chance to play a pivotal role in creating unforgettable moments—all for free! No special skills are required – just bring your energy, enthusiasm, and passion for making a difference.</p>
+        <p>Whether you're interested in tending bars, managing cleanup efforts, ensuring security, or helping with stage building, there's a place for you. Dive into the festival spirit, forge new friendships, and contribute to the magic that makes our event extraordinary. Ready to join the festival family? Sign up now and let the excitement begin!</p>
+        <div class="col_button1">
+          <a class="a" href="volunteer.astro">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
     .forsidebilde {
-  margin-top:-200px;
-  display: grid;
-  place-items: center;
-  position: relative;
-  padding-bottom: 50px;
-  
-}
-img {
-  min-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
+      margin-top: -200px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      padding-bottom: 50px;
+    }
+    img {
+      min-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
 
- h1 {
-    position: absolute;
-    top: 110%;
-    left: 13%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: #fff;
-  }
+    h1 {
+      position: absolute;
+      top: 110%;
+      left: 13%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: #fff;
+    }
 
-  .header_green {
-    position: absolute;
-    top: 13px;
-    left: 195px;
-  }
+    .header_green {
+      position: absolute;
+      top: 13px;
+      left: 195px;
+    }
 
-.grid02 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    .grid02 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .grid02_text {
+      font-family: "Hind Madurai", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      margin-left: -100px;
+      margin-right: 50px;
+      margin-top: 50px;
+      margin-bottom: -20px;
+      padding-top: 30px;
+      line-height: 150%;
+    }
 
-}
-.grid02_text {
-font-family: "Hind Madurai", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-left: -100px;
-  margin-right: 50px;
-  margin-top: 50px;
-  margin-bottom: -20px;
-  padding-top: 30px;
-  line-height: 150%;
-}
+    .grid02_img {
+      height: auto;
+      display: grid;
+    }
 
-.grid02_img {
-  height: auto;
-  display: grid;
-}
+    .grid03 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
 
-.grid03 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+    .grid03_img {
+      margin-top: 200px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      padding-left: 500px;
+    }
 
-.grid03_img {
-  margin-top:200px;
-  display: grid;
-  place-items: center;
-  position: relative;
-  padding-left: 500px;
-}
-
-.grid03_text {
-  font-family: "Hind Madurai", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  /* margin-left: -100px;
+    .grid03_text {
+      font-family: "Hind Madurai", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      position: absolute;
+      padding-left: 700px;
+      padding-top: 380px;
+      line-height: 170%;
+      /* margin-left: -100px;
   margin-right: 50px;
   margin-top: 50px;
   margin-bottom: -20px; */
-}
-
-
-.volunteer_forside {
-min-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.map_img {
-  width: 100px;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  margin-left: 100px;
-}
-
-
-.knapper_forside {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: absolute;
-  gap: 850px;
-  padding-top: 400px;
-}
-
-.mapknap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: absolute;
-  margin-left: 66%;
-  margin-top: 350px;
-}
-
-.col_button {
-  padding-top: 100px;
-}
-
-
-  .karrusel {
-    position: relative;
-    margin-left: -190px;
-  }
-  .karrusel_header {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    padding-bottom: 40px;
-  }
-
-.karrusel_1{
-  position: absolute;
-}
-
-@media (max-width: 800px) {
-   h2 {
-position: relative;
-   }
-   img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.volunteer_forside {
-    max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.map_img {
-    max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.grid02 {
-    grid-template-columns: 1fr;
-  }
-
-  .grid03 {
-    grid-template-columns: 1fr;
-  }
-
-
     }
-</style>
+    .overskrift {
+      position: absolute;
+      padding-left: 695px;
+      padding-top: 315px;
+    }
+    .volunteer_forside {
+      min-width: 80%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .map_img {
+      width: 100px;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      margin-left: 100px;
+    }
+
+    .knapper_forside {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: absolute;
+      gap: 850px;
+      padding-top: 400px;
+    }
+
+    .mapknap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: absolute;
+      margin-left: 66%;
+      margin-top: 350px;
+    }
+
+    .col_button {
+      padding-top: 100px;
+    }
+    .col_button1 {
+      padding-top: 30px;
+    }
+    .karrusel {
+      position: relative;
+      margin-left: -190px;
+    }
+    .karrusel_header {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      padding-bottom: 40px;
+    }
+
+    .karrusel_1 {
+      position: absolute;
+    }
+    .a {
+      padding-top: 20px;
+    }
+
+    @media (max-width: 800px) {
+      h2 {
+        position: relative;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      .volunteer_forside {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      .map_img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      .grid02 {
+        grid-template-columns: 1fr;
+      }
+
+      .grid03 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</LayoutIndex>
