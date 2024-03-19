@@ -35,7 +35,7 @@ a {
   font-weight: 700;
   font-style: normal;
 }
-
+/********* en klasse til links forstyrede knapperne ****/
 .a {
   color: var(--accentgreen);
 }
@@ -95,27 +95,25 @@ li a {
 }
 
 /********** Mobil ***********/
-@media (max-width: 800px) {
-  h1 {
-    font-size: 32px;
-  }
-  h2,
-  .header_green {
-    font-size: 28px;
-  }
-  h3,
-  .important_points {
-    font-size: 24px;
-  }
-  h4,
-  input,
-  textarea {
-    font-size: 18px;
-  }
+h1 {
+  font-size: 32px;
+}
+h2,
+.header_green {
+  font-size: 28px;
+}
+h3,
+.important_points {
+  font-size: 24px;
+}
+h4,
+input,
+textarea {
+  font-size: 18px;
+}
 
-  p {
-    font-size: 16;
-  }
+p {
+  font-size: 16;
 }
 
 /********** Desktop *********/

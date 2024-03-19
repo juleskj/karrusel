@@ -1,18 +1,45 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Buttons from "../componets/Buttons.astro";
+const { variant, size } = Astro.props;
 ---
 
 <MainLayout>
   <div class="grid_1_1">
     <div class="ticket_2">
+      <p class="navn_pris">Early bird 1800kr</p>
+      <p class="beskrivelse">Save money and get a full festival pass</p>
+      <button>Buy</button>
       <img src="img_karrusel/ticket.png" alt="ticket" />
+      <p class="navn_pris">All Day Pass 2000kr</p>
+      <p class="beskrivelse">Full festival pass</p>
+      <button>Buy</button>
       <img src="img_karrusel/ticket.png" alt="ticket" />
     </div>
 
     <div class="ticket_3">
+      <div class="foeste_dag">
+        <p class="navn">Thursday 22nd</p>
+        <p class="pris">1000kr</p>
+      </div>
+      <p class="beskrivelse">One day pass</p>
+      <button>Buy</button>
       <img src="img_karrusel/ticket.png" alt="ticket" />
+
+      <div class="anden_dag">
+        <p class="navn">Friday 23rd</p>
+        <p class="pris">1000kr</p>
+      </div>
+      <p class="beskrivelse">One day pass</p>
+      <button>Buy</button>
       <img src="img_karrusel/ticket.png" alt="ticket" />
+
+      <div class="trejde_dag">
+        <p class="navn">Saturday 24th</p>
+        <p class="pris">1000kr</p>
+      </div>
+      <p class="beskrivelse">One day pass</p>
+      <button>Buy</button>
       <img src="img_karrusel/ticket.png" alt="ticket" />
     </div>
   </div>
@@ -31,5 +58,52 @@ import Buttons from "../componets/Buttons.astro";
   body {
     background-image: url("img_karrusel/Vector.png");
     object-fit: cover;
+  }
+  img {
+    width: 200%;
+  }
+  @media (max-width: 1150px) {
+    .grid_1_1 {
+      display: block;
+    }
+  }
+  .ticket_2 {
+    display: block;
+  }
+  img {
+    width: 200%;
+  }
+  .navn {
+    padding-left: 40px;
+  }
+  .foeste_dag {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 280px;
+  }
+  .anden_dag {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 300px;
+  }
+
+  .trejde_dag {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 280px;
+  }
+  .beskrivelse {
+    position: absolute;
+  }
+  button {
+    margin-left: 315px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 90px;
+    position: absolute;
+    font-size: 1rem;
+    background-color: #cffa72;
   }
 </style>
