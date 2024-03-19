@@ -9,10 +9,10 @@ import Buttons from "../componets/Buttons.astro";
   hero_tekst="About us"
   hero_tekst_green="karrusel"
 >
-  <div class="main_luft">
-    <div class="article_grid">
-      <article class="experience_grid">
-        <h2>Festival experience</h2>
+
+<div class="article_grid">
+  <article class="experience_grid">
+    <h2>Festival experience</h2>
 
         <p>
           Karrusel believes in the right to a harassment-free festival
@@ -107,27 +107,24 @@ import Buttons from "../componets/Buttons.astro";
     <div class="form">
       <h2>Hold yourself updated with a newsletter!</h2>
 
-      <form>
-        <label for="Email"></label>
-        <input
-          type="text"
-          id="Email"
-          name="Email"
-          required
-          placeholder="Email:"
-        /><br />
-        <label for="telNo"></label>
-        <input type="tel" id="phone" name="phone" required placeholder="Tlf:" />
-        <Buttons variant="primary" size="size">Send </Buttons>
-      </form>
-    </div>
+    <form>
+      <label for="Email"></label>
+      <input
+        type="text"
+        id="Email"
+        name="Email"
+        required
+        placeholder="Email:"
+      /><br />
+      <label for="telNo"></label>
+      <input type="tel" id="phone" name="phone" required placeholder="Tlf:" />
+      <Buttons variant="primary" size="size">Send </Buttons>
+    </form>
   </div>
 </MainLayout>
 
 <style>
-  .main_luft {
-    padding: 20px;
-  }
+
   /* Billede med tekst */
   /*.billede_med_tekst {
     display: grid;
@@ -173,9 +170,7 @@ import Buttons from "../componets/Buttons.astro";
   }
 
   @media (min-width: 800px) {
-    .main_luft {
-      padding: 0;
-    }
+
     article {
       padding: 30px;
       margin: 0;
