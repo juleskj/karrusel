@@ -27,6 +27,8 @@ console.log(artist);
 ---
 
 <MainLayout title={artist.artistName}>
+  <a class="a" href="/line_up"> Go to Line up </a>
+
   <section class="image_info">
     <div class="text_on_image">
       <h2 class="artist_name">{artist.artistName}</h2>
@@ -73,6 +75,7 @@ console.log(artist);
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
+          title={artist.artistName}
         />
       </div>
     )
@@ -80,6 +83,11 @@ console.log(artist);
 </MainLayout>
 
 <style>
+  .a {
+    top: 20%;
+    left: 5%;
+    position: absolute;
+  }
   .sportify_box {
     padding-top: 50px;
   }
