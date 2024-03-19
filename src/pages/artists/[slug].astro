@@ -57,9 +57,32 @@ console.log(artist);
       <p>{artist.myMusic}</p>
     </div>
   </section>
+
+  <!-- Her vises spotfiy box med sange, der er en condiction så vis der er  artist.spotify_box så skal den
+  vise hvad er er i diven
+  -->
+  {
+    artist.spotify_box && (
+      <div class="sportify_box">
+        <iframe
+          style="border-radius:12px"
+          src={artist.spotify_box}
+          width="100%"
+          height="352"
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        />
+      </div>
+    )
+  }
 </MainLayout>
 
 <style>
+  .sportify_box {
+    padding-top: 50px;
+  }
   h3 {
     padding: 25px 0 10px 0;
   }
