@@ -12,7 +12,14 @@ const { data } = Astro.props;
   <h3>{data.artistName}</h3>
   <h4>{data.dato}</h4>
   <p>Country: {data.country}</p>
-  <span> <a class="a" href={data.sportifyLink}></a></span>
+  {
+    data.sportifyLink && (
+      <span>
+        {" "}
+        <a class="a" href={data.sportifyLink} />
+      </span>
+    )
+  }
   <a class="a" href={`artists/${data.slug}`}>Read more</a>
 </article>
 
