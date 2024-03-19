@@ -7,11 +7,14 @@ const { variant, size } = Astro.props;
 <MainLayout>
   <div class="grid_1_1">
     <div class="ticket_2">
-      <p class="navn_pris">Early bird 1800kr</p>
+      <p class="navn">Early bird</p>
+      <p class="pris">1800kr</p>
       <p class="beskrivelse">Save money and get a full festival pass</p>
       <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
       <img src="img_karrusel/ticket.png" alt="ticket" />
-      <p class="navn_pris">All Day Pass 2000kr</p>
+
+      <p class="navn">All Day Pass</p>
+      <p class="pris">2000kr</p>
       <p class="beskrivelse">Full festival pass</p>
       <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
       <img src="img_karrusel/ticket.png" alt="ticket" />
@@ -23,7 +26,7 @@ const { variant, size } = Astro.props;
         <p class="pris">1000kr</p>
       </div>
       <p class="beskrivelse">One day pass</p>
-        <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
+      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
       <img src="img_karrusel/ticket.png" alt="ticket" />
 
       <div class="anden_dag">
@@ -31,7 +34,7 @@ const { variant, size } = Astro.props;
         <p class="pris">1000kr</p>
       </div>
       <p class="beskrivelse">One day pass</p>
-        <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
+      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
       <img src="img_karrusel/ticket.png" alt="ticket" />
 
       <div class="trejde_dag">
@@ -39,7 +42,7 @@ const { variant, size } = Astro.props;
         <p class="pris">1000kr</p>
       </div>
       <p class="beskrivelse">One day pass</p>
-        <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
+      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
       <img src="img_karrusel/ticket.png" alt="ticket" />
     </div>
   </div>
@@ -59,9 +62,7 @@ const { variant, size } = Astro.props;
     background-image: url("img_karrusel/Vector.png");
     object-fit: cover;
   }
-  img {
-    width: 200%;
-  }
+
   @media (max-width: 1150px) {
     .grid_1_1 {
       display: block;
@@ -94,16 +95,6 @@ const { variant, size } = Astro.props;
   }
   .beskrivelse {
     position: absolute;
-  }
-  button {
-    margin-left: 315px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 90px;
-    position: absolute;
-    font-size: 1rem;
-    background-color: #cffa72;
-  }
+  
+
 </style>
