@@ -82,26 +82,24 @@ console.log(artist);
   .text_on_image {
     display: grid;
     padding-bottom: 50px;
-    padding: 10px;
   }
 
   ul {
     padding: 30px;
   }
 
-  .info,
-  .about_arist {
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding-top: 50px;
-  }
-
   @media (min-width: 800px) {
     .image_info {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .about_arist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding-top: 50px;
     }
   }
 </style>
