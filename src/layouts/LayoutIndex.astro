@@ -19,10 +19,6 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
   </head>
   <body>
     <IndexHeader />
-    <div class="billede_med_tekst">
-      {hasImg && <img src={hero_img} alt="Hero image" class="hero_img" />}
-      <h1 class="hero_tekst">{hero_tekst}</h1>
-      <h2 class="header_green">{hero_tekst_green}</h2>
     </div>
     <main>
       <slot />
@@ -59,6 +55,7 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
     display: block;
     object-fit: cover;
     min-width: 100%;
+    margin-top: -200px;
   }
 
   .hero_tekst {
