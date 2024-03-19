@@ -2,7 +2,6 @@
 const { title } = Astro.props;
 import Header from "../componets/Header.astro";
 import Footer from "../componets/Footer.astro";
-import Hero from "../componets/Hero.astro";
 const { hero_img, hero_tekst, hero_tekst_green } = Astro.props;
 ---
 
@@ -64,11 +63,9 @@ const { hero_img, hero_tekst, hero_tekst_green } = Astro.props;
     display: grid;
     place-items: center;
     position: relative;
-    padding-bottom: 50px;
   }
   .hero_img {
     width: 100%;
-    max-height: 600px;
     height: auto;
     display: block;
     object-fit: cover;

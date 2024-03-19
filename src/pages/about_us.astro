@@ -9,7 +9,10 @@ import Buttons from "../componets/Buttons.astro";
   hero_tekst="About us"
   hero_tekst_green="karrusel"
 >
-  <article class="top_section">
+
+<div class="main_luft">
+<div class="article_grid">
+  <article class="experience_grid">
     <h2>Festival experience</h2>
 
     <p>
@@ -19,9 +22,8 @@ import Buttons from "../componets/Buttons.astro";
       histories and backgrounds.Karrusel only exists if everyone takes care of
       each other, respects their own and others boundaries, embraces diversity
       and acts as a part of the community.
-      <br />
     </p>
-
+<br>
     <p>
       If you feel unsafe, please reach out to our awareness team. They will be
       wearing a pink vests and walk around the site and be at their base (see on
@@ -31,25 +33,7 @@ import Buttons from "../componets/Buttons.astro";
     </p>
   </article>
 
-  <div class="article_grid">
-    <article class="bar_grid">
-      <h2>Sustainability</h2>
-      <p>
-        Karrusel is committed to becoming more sustainable. In order to save
-        resources and reduce waste we use left over materials and timber for
-        stage designs and installations. We will re-use production and print
-        materials when possible year after year. Beverages are served in
-        reusable or sustainable materials. Straws are not being used.
-
-        <br />
-        How you can help: Take a bike or public transport to the festival. Don’t
-        bring confetti or glitter to the festival. There will be free tap water stations
-        during the festival. Please bring an empty cup or bottle and drink nice free
-        tap water.
-      </p>
-    </article>
-
-    <article>
+    <article class="history_grid">
       <h2>History</h2>
       <p>
         2024 marks the 5th edition of Karrusel. Karrusel is a circus themed rave
@@ -62,7 +46,26 @@ import Buttons from "../componets/Buttons.astro";
       </p>
     </article>
 
-    <article>
+    <article class="sustainability_grid">
+      <h2>Sustainability</h2>
+      <div class="sustainability_grid_opdelt">
+        <p>
+          Karrusel is committed to becoming more sustainable. In order to save
+          resources and reduce waste we use left over materials and timber for
+          stage designs and installations. We will re-use production and print
+          materials when possible year after year. Beverages are served in
+          reusable or sustainable materials. Straws are not being used.
+        </p>
+        <p>
+          How you can help: Take a bike or public transport to the festival. Don’t
+          bring confetti or glitter to the festival. There will be free tap water stations
+          during the festival. Please bring an empty cup or bottle and drink nice free
+          tap water.
+        </p>
+      </div>
+    </article>
+
+    <article class="contact_grid">
       <h2>Contact</h2>
       <p>
         Email: <a href="https://www.nusnus.dk/contact/">info@nusnus.dk</a>
@@ -80,7 +83,7 @@ import Buttons from "../componets/Buttons.astro";
       </p>
     </article>
 
-    <article class="stage_grid">
+    <article class="year_grid">
       <h2>2024</h2>
       <p>
         Karrusel, Copenhagen, Refshaleøen 22-24 August 2024 3 days of house,
@@ -109,11 +112,16 @@ import Buttons from "../componets/Buttons.astro";
       <Buttons variant="primary" size="size">Send </Buttons>
     </form>
   </div>
+</div>
 </MainLayout>
 
 <style>
+
+.main_luft {
+    padding: 20px;
+  }
   /* Billede med tekst */
-  .billede_med_tekst {
+  /*.billede_med_tekst {
     display: grid;
     place-items: center;
     position: relative;
@@ -140,7 +148,8 @@ import Buttons from "../componets/Buttons.astro";
     position: absolute;
     top: 52%;
     left: 52%;
-  }
+  }*/
+
 
   h2 {
     padding-bottom: 20px;
@@ -156,36 +165,48 @@ import Buttons from "../componets/Buttons.astro";
     gap: 20px;
   }
 
-  .top_section {
-    padding: 10px;
-  }
-
   @media (min-width: 800px) {
+    .main_luft {
+      padding: 0;
+    }
     article {
       padding: 30px;
       margin: 0;
     }
 
-    section {
+    .article_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      padding-top: 20px;
+    }
+
+    .experience_grid {
+      grid-column: 1/4;
+    }
+
+    .history_grid{
+      grid-column: 4/6;
+    }
+
+    .sustainability_grid {
+      grid-row: 2/3;
+      grid-column: 1/6;
+    }
+
+    .sustainability_grid_opdelt {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
 
-    .article_grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      padding-top: 20px;
-    }
-
-    .bar_grid {
+    .contact_grid{
       grid-column: 1/3;
     }
 
-    .stage_grid {
-      grid-row: 2/3;
-      grid-column: 2/4;
+    .year_grid{
+      grid-column: 3/6;
     }
+
   }
 
   .form {
@@ -213,6 +234,7 @@ import Buttons from "../componets/Buttons.astro";
   }
 
   @media (min-width: 800px) {
+    
     .form {
       padding-bottom: 0;
 

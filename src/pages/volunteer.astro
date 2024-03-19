@@ -9,7 +9,7 @@ import Buttons from "../componets/Buttons.astro";
   hero_tekst="Volunteer"
 >
   <div class="main_luft">
-    <h2>Our principles</h2>
+    <h2 class="principles_luft">Our principles</h2>
     <section>
       <p>
         Volunteering at a festival is a vibrant tapestry woven with threads of
@@ -141,7 +141,7 @@ import Buttons from "../componets/Buttons.astro";
   }
 
   /* Billede med tekst */
-  .billede_med_tekst {
+  /*.billede_med_tekst {
     display: grid;
     place-items: center;
     position: relative;
@@ -149,7 +149,6 @@ import Buttons from "../componets/Buttons.astro";
   }
   img {
     width: 100%;
-    max-height: 600px;
     height: auto;
     display: block;
     object-fit: cover;
@@ -163,6 +162,10 @@ import Buttons from "../componets/Buttons.astro";
     transform: translate(-50%, -50%);
     z-index: 1;
     color: #fff;
+  }*/
+
+  .principles_luft {
+    padding-top: 50px;
   }
 
   h2 {
@@ -186,24 +189,24 @@ import Buttons from "../componets/Buttons.astro";
     padding-top: 100px;
   }
 
+    /******************** Forms *********************/
   .forms_h2 {
     padding-top: 100px;
   }
 
-  /******************** Forms *********************/
   form {
     padding-bottom: 50px;
   }
   input {
     box-sizing: border-box;
     padding: 5px;
-    margin: 5px;
+    margin: 0 10px 10px 0;
     width: 100%;
   }
   textarea {
     box-sizing: border-box;
     padding: 5px;
-    margin: 5px;
+    margin: 0 10px 10px 0;
     width: 100%;
     height: 150px;
   }
