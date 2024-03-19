@@ -5,15 +5,18 @@ const { variant, size } = Astro.props;
 ---
 
 <MainLayout>
-  <div class="grid_1_1">
+    <article>
     <div class="ticket_2">
       <p class="navn">Early bird</p>
       <p class="pris">1800kr</p>
-      <p class="beskrivelse">Save money and get a full festival pass</p>
-      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
+      <p class="beskrivelse">Save money and get a </p>
+      <p class="beskrivelse1">full festival pass</p>
+    </div>
+      <div class="buy_knap"><Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons></div>
+      <img src="img_karrusel/ticket.png" alt="ticket"/>
+    </article>
 
-      <p class="navn">All Day Pass</p>
+     <!--  <p class="navn">All Day Pass</p>
       <p class="pris">2000kr</p>
       <p class="beskrivelse">Full festival pass</p>
       <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
@@ -45,10 +48,58 @@ const { variant, size } = Astro.props;
       <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
       <img src="img_karrusel/ticket.png" alt="ticket" />
     </div>
-  </div>
+  </div>-->
 </MainLayout>
 
 <style>
+
+article{
+    position: relative;
+}
+.buy_knap{
+    position: absolute;
+    bottom: 30px; 
+    left: 395px;
+}
+  
+.navn{
+    position: absolute;
+    bottom: 100px; 
+    font-weight: bold;
+    font-size: 30px;
+    left: 10px;
+    color:  #2d224c;
+
+  }
+  .pris{
+    position: absolute;
+    bottom: 100px; 
+   font-weight: bold;
+    left: 400px;
+    font-size: 1.8rem;
+    color:  #2d224c;
+  }
+  .beskrivelse{
+    position: absolute;
+    bottom: 60px; 
+    left: 50px;
+ color:  #2d224c;
+ font-size: 20px;
+ 
+  }
+  .beskrivelse1{
+    position: absolute;
+    bottom: 35px; 
+    left: 50px;
+    color:  #2d224c;
+    font-size: 20px;
+  }
+
+
+
+
+
+
   .grid_1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -58,11 +109,7 @@ const { variant, size } = Astro.props;
   .ticket_2 {
    
   }
-  .ticket_knap{
-    position: absolute;
-   margin-left: 800px;
-   margin-top: 50px;
-  }
+  
   body {
     background-image: url("img_karrusel/Vector.png");
     object-fit: cover;
