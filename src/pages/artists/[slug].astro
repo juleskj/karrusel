@@ -48,10 +48,14 @@ console.log(artist);
   </section>
 
   <section class="about_arist">
-    <h3>Who am i?</h3>
-    <p>{artist.whoAmI}</p>
-    <h3>My music</h3>
-    <p>{artist.myMusic}</p>
+    <div>
+      <h3>Who am i?</h3>
+      <p>{artist.whoAmI}</p>
+    </div>
+    <div>
+      <h3>My music</h3>
+      <p>{artist.myMusic}</p>
+    </div>
   </section>
 </MainLayout>
 
@@ -88,6 +92,10 @@ console.log(artist);
   .info,
   .about_arist {
     padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 50px;
   }
 
   @media (min-width: 800px) {

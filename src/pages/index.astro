@@ -1,34 +1,27 @@
 ---
 
 import LayoutIndex from "../layouts/LayoutIndex.astro";
-import IndexButtons from "../componets/IndexButtons.astro";
+import Buttons from "../componets/IndexButtons.astro";
 import Countdown from "../componets/Countdown.astro"
 ---
 
 <LayoutIndex> 
    <div class="forsidebilde">
     <img src="../../public/img_karrusel/forside.png" alt="forside bilde"/>
-        <h2>KARRUSEL FESTIVAL OPENS IN</h2>
+        <h2 class="karrusel_header">KARRUSEL FESTIVAL OPENS IN</h2>
         <Countdown />
         <div class="knapper_forside">
-          <IndexButtons class="lineup_knap" variant="primary" size="size"><a href="line_up">Lineup</a></IndexButtons>
-      <IndexButtons class="ticket_knap" variant="primary" size="size"><a href="ticket">Tickets</a></IndexButtons>
+          <Buttons class="lineup_knap" variant="primary" size="size"><a href="line_up">Lineup</a></Buttons>
+      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Tickets</a></Buttons>
    </div>
-  </div>
-        <!-- <a href="path/to/line_up.astro">
-  <img class="lineup_knap" src="../../public/img_karrusel/lineup_knap.png" alt="Lineup knap">
-
-  <a href="path/to/ticket.astro">
-  <img class="ticket_knap" src="../../public/img_karrusel/ticket_knap.png" alt="Lineup knap">
-</a>
-</div> -->
-<!-- -->
-
-<div>
-  <div class="grid03">
-       <div class="grid03_text">
-        <h1>Karrusel</h1>
+   </div>
+       
+  <div class="karrusel">
+  <h1 class="karrusel_1">Karrusel</h1>
     <h2 class="header_green">FESTIVAL</h2>
+</div>
+  <div class="grid02">   
+       <div class="grid02_text">
           <p>
             Karrusel believes in the right to a harassment-free festival experience. 
             We believe in the right of everyone to express themselves. Karrusel welcomes 
@@ -36,23 +29,42 @@ import Countdown from "../componets/Countdown.astro"
             backgrounds. 
             </p>
             <p>
-  Karrusel is committed to becoming more sustainable. In order to save resources and reduce waste we use left over materials and timber for stage designs and installations. We will re-use production and print materials when possible year after year. Beverages are served in reusable or sustainable materials. Straws are not being used.</p> 
-  <div class="col_button">
+  Karrusel is committed to becoming more sustainable. In order to save resources and reduce 
+  waste we use left over materials and timber for stage designs and installations. We will re-use 
+  production and print materials when possible year after year. Beverages are served in reusable 
+  or sustainable materials. Straws are not being used.</p> 
+   <div class="col_button">
                 <a class="volunteer_button" href="volunteer.astro">Read more</a>
             </div>
-   
-  <div class="grid03_img">
-            <img src="../../public/img_karrusel/map_forside.png" alt="Map forside">
+
+   </div> 
+  
+  <div class="grid02_img">
+            <img class="map_img" src="../../public/img_karrusel/map_forside.png" alt="Map forside">
         </div>
-         <div><IndexButtons variant="secondary" size="size"><a href="map">Map</a></IndexButtons>
+         <div class="mapknap"><Buttons variant="secondary" size="size"><a href="map">Map</a></Buttons>
        </div>
+ 
+ 
+  <div class="grid03">
+    <div class="grid03_img">
+    <img class="volunteer_forside" src="../../public/img_karrusel/volunteer_index.png" alt="volunteer forside">
+ </div>
+<div class="grid03_text">
+    <h2>Volunteer</h2>
+    <p>
+      Embark on a unique adventure and be the heartbeat of the festival as a volunteer! 
+      Joining our vibrant team offers you the chance to play a pivotal role in creating 
+      unforgettable moments—all for free! No special skills are required – just bring your 
+      energy, enthusiasm, and passion for making a difference. Whether you're interested 
+      in tending bars, managing cleanup efforts, ensuring security, or helping with stage building, 
+      there's a place for you. Dive into the festival spirit, forge new friendships, and contribute 
+      to the magic that makes our event extraordinary. Ready to join the festival family? Sign 
+      up now and let the excitement begin!
+    </p> 
   </div>
+   </div>
 
-
-
-<!-- <div>
-<img class="volunteer_index" src="../../public/img_karrusel/volunteer_index.png" alt="Volunteer forside">
-</div> -->
 </LayoutIndex>
 
 
@@ -64,6 +76,7 @@ import Countdown from "../componets/Countdown.astro"
   place-items: center;
   position: relative;
   padding-bottom: 50px;
+  
 }
 img {
   min-width: 100%;
@@ -83,26 +96,16 @@ img {
 
   .header_green {
     position: absolute;
-    top: 117%;
-    left: 20%;
+    top: 13px;
+    left: 195px;
   }
 
-.grid03 {
+.grid02 {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
 }
-
-.grid03_img {
-  height: auto;
-  max-width: 10px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  /* box-shadow: 3px 3px 6px rgba(30, 30, 30, 0.2); */
-  /* border-radius: 5px; */
-}
-
-.grid03_text {
+.grid02_text {
 font-family: "Hind Madurai", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -110,7 +113,54 @@ font-family: "Hind Madurai", sans-serif;
   margin-right: 50px;
   margin-top: 50px;
   margin-bottom: -20px;
+  padding-top: 30px;
+  line-height: 150%;
 }
+
+.grid02_img {
+  height: auto;
+  display: grid;
+}
+
+.grid03 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid03_img {
+  margin-top:200px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding-left: 500px;
+}
+
+.grid03_text {
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* margin-left: -100px;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: -20px; */
+}
+
+
+.volunteer_forside {
+min-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.map_img {
+  width: 100px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin-left: 100px;
+}
+
 
 .knapper_forside {
   display: grid;
@@ -120,9 +170,24 @@ font-family: "Hind Madurai", sans-serif;
   padding-top: 400px;
 }
 
- 
+.mapknap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  margin-left: 66%;
+  margin-top: 350px;
+}
 
-  h2 {
+.col_button {
+  padding-top: 100px;
+}
+
+
+  .karrusel {
+    position: relative;
+    margin-left: -190px;
+  }
+  .karrusel_header {
     position: absolute;
     top: 35%;
     left: 50%;
@@ -130,21 +195,10 @@ font-family: "Hind Madurai", sans-serif;
     z-index: 1;
     padding-bottom: 40px;
   }
-/* 
-  .lineup_knap {
-margin-left: -310%;
-margin-top: -230%;
-width: 150px;
-height: auto;
-  }
 
-  .ticket_knap {
-margin-left: 310%;
-margin-top: -230%;
-width: 150px;
-height: auto;
-  } */
-
+.karrusel_1{
+  position: absolute;
+}
 
 @media (max-width: 800px) {
    h2 {
@@ -157,18 +211,28 @@ position: relative;
   object-fit: cover;
 }
 
-/* .lineup_knap {
-width: 100px;
-height: auto;
-margin-left: -130%;
-margin-top: 230%;
+.volunteer_forside {
+    max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-.ticket_knap {
-width: 100px;
-height: auto;
-margin-left: 130%;
-margin-top: -53%;
-} */
+.map_img {
+    max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.grid02 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid03 {
+    grid-template-columns: 1fr;
+  }
+
+
     }
 </style>

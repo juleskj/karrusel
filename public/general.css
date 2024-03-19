@@ -37,14 +37,19 @@ a {
 }
 /********* en klasse til links forstyrede knapperne ****/
 .a {
-  font-family: "Hind Madurai", sans-serif;
-  font-weight: 700;
-  font-style: normal;
   color: var(--accentgreen);
 }
 
 .a:hover {
   color: var(--hovergreen);
+}
+
+.a_lilla {
+  color: var(--lillacard);
+}
+
+.a_lilla:hover {
+  color: var(--backgroundcolor);
 }
 
 /********** H2, H3, H4, menu li ***********/

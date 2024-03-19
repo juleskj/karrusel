@@ -7,9 +7,16 @@ const {variant, size} = Astro.props;
 <style>
     button {
   border-radius: 10px; 
-  padding: 10px 20px; 
+  padding: 15px 25px; 
   border: none;
   cursor: pointer; 
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a{
+  list-style: none;
 }
 
 /********** variant **********/
@@ -31,20 +38,5 @@ const {variant, size} = Astro.props;
     background-color: var(--lillabuttonhover);
 }
 
-/*********** size ***********/
-
-/*********** Mobil *********/
-@media (max-width: 800px){
-    .size{
-    font-size: 1rem;
-}
-}
-
-/*********** Desktop *********/
-@media (min-width: 800px){
-    .size{
-    font-size: 3rem;
-}
-}
 
 </style>
