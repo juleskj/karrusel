@@ -1,36 +1,32 @@
 ---
-import Buttons from "../componets/Buttons.astro"
+import Buttons from "../componets/Buttons.astro";
 
-const {navn, beskrivelse,beskrivelse1,pris} = Astro.props
-
+const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
 ---
 
 <div class="ticket_2">
-    <div class="information">
-      <p class="navn">{navn}</p>
-      <p class="pris">{pris}</p>
-      </div>
-      <div class="description">
-        <div>
-            <p class="beskrivelse">{beskrivelse}</p>
-            <p class="beskrivelse1">{beskrivelse1}</p>
-        </div>
-        <div class="ticket_knap">
-            <Buttons variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
-         </div>
-      </div>
-      <img class="background" src="img_karrusel/ticket.png" alt="ticket" />
-
+  <div class="information">
+    <p class="navn">{navn}</p>
+    <p class="pris">{pris}</p>
+  </div>
+  <div class="description">
+    <div>
+      <p class="beskrivelse">{beskrivelse}</p>
+      <p class="beskrivelse1">{beskrivelse1}</p>
+    </div>
+    <div class="ticket_knap">
+      <Buttons variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
+    </div>
+  </div>
+  <img class="background" src="img_karrusel/ticket.png" alt="ticket" />
 </div>
 
 <style>
-  .ticket_2{
+  .ticket_2 {
     display: grid;
     width: 500px;
-
   }
-  .information{
-  
+  .information {
     grid-column: 1;
     grid-row: 1;
     z-index: 10;
@@ -42,38 +38,33 @@ const {navn, beskrivelse,beskrivelse1,pris} = Astro.props
     padding-right: 50px;
     padding-top: 20px;
     font-size: 1.8rem;
-
     color: var(--lillatekstcard);
-
   }
-    .description{
+  .description {
     grid-column: 1;
     grid-row: 1;
     z-index: 10;
     align-self: end;
-      display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 50px;
     padding-bottom: 10px;
     padding-right: 50px;
-   
+
     color: var(--lillatekstcard);
-
-
   }
 
-  .background{
-       grid-column: 1;
+  .background {
+    grid-column: 1;
     grid-row: 1;
     z-index: 1;
     width: 100%;
   }
-.navn{
+  .navn {
     font-weight: bold;
-}
-.pris{
+  }
+  .pris {
     font-weight: bold;
-}
-
+  }
 </style>
