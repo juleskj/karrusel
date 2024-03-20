@@ -22,7 +22,6 @@ import Buttons from "../componets/IndexButtons.astro";
 
   <h1 class="karrusel_1">Karrusel</h1>
   <h2 class="header_green">FESTIVAL</h2>
-
   <div class="grid02">
     <div class="grid02_text">
       <p>
@@ -59,14 +58,6 @@ import Buttons from "../componets/IndexButtons.astro";
   </div>
 
   <div class="grid03">
-    <div class="grid03_img">
-      <img
-        class="volunteer_forside"
-        src="/img_karrusel/volunteer_index.png"
-        alt="volunteer forside"
-      />
-    </div>
-
     <div class="grid03_text">
       <h2 class="overskrift">Volunteer</h2>
       <p>
@@ -88,20 +79,32 @@ import Buttons from "../componets/IndexButtons.astro";
         <a class="a" href="volunteer">Read more about volunterring</a>
       </div>
     </div>
+
+    <div class="grid03_img">
+      <img
+        class="volunteer_forside"
+        src="/img_karrusel/volunteer_index.png"
+        alt="volunteer forside"
+      />
+    </div>
   </div>
 
   <style>
+    .karrusel_1 {
+      padding-top: 100px;
+    }
     .button {
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-decoration: none;
       padding: 13px 0;
     }
 
     .header_green {
       position: relative;
-      /* left: 50px; */
+      left: 50px;
+      width: 0;
     }
     .grid02 {
       display: grid;
@@ -125,6 +128,22 @@ import Buttons from "../componets/IndexButtons.astro";
     .volunteer_forside {
       width: 100%;
     }
+    .grid03 {
+      display: grid;
+    }
+    .grid03_img {
+      width: 100%;
+      align-self: end;
+    }
+
+    .grid03_text {
+      z-index: 1;
+      padding-top: 50px;
+    }
+
+    .overskrift {
+      padding-bottom: 20px;
+    }
 
     @media (min-width: 800px) {
       /*.knapper_forside{
@@ -133,17 +152,18 @@ grid-template-columns: 1fr 1fr;
 gap: 650px;
   }*/
 
+      .karrusel_1 {
+        padding-top: 0;
+      }
+
       .knapper_forside {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px; /* Juster gap efter behov */
-        justify-items: center; /* Centrer indholdet vandret */
-        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
       }
 
       .knapper {
-        position: absolute;
-        top: 80%;
+        position: relative;
+        bottom: 250px;
       }
 
       .grid02 {
@@ -170,175 +190,6 @@ gap: 650px;
         padding-top: 100px;
         margin: 10px;
       }
-    }
-
-    /*  
-    img {
-      min-width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    h1 {
-      position: absolute;
-      top: 110%;
-      left: 13%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      color: #fff;
-    }
-
-    .header_green {
-      position: absolute;
-      top: 13px;
-      left: 195px;
-    }
-
-    .grid02 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .grid02_text {
-      font-family: "Hind Madurai", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      margin-left: -100px;
-      margin-right: 50px;
-      margin-top: 50px;
-      margin-bottom: -20px;
-      padding-top: 30px;
-      line-height: 150%;
-    }
-
-    .grid02_img {
-      height: auto;
-      display: grid;
-    }
-
-    .grid03 {
-      display: grid;
-      grid-template-columns: 1fr 1fr ;
-      margin-left: -25%;
-    }
-.grid03_img {
-      margin-top: 200px;
-      display: grid;
-      place-items: center;
-      position: relative;
-     /* padding-left: 500px; */
-    /* object-fit: scale-down; 
-    } 
-
-    .grid03_text {
-      font-family: "Hind Madurai", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      position: absolute;
-      padding-left: 700px;
-      padding-right: 30px;
-      padding-top: 380px;
-      line-height: 170%;
-      /* margin-left: -100px;
-  margin-right: 50px;
-  margin-top: 50px;
-  margin-bottom: -20px; 
-    }
-    .overskrift {
-      position: absolute;
-      padding-left: 695px;
-      padding-top: 315px;
-    }
-    .volunteer_forside {
-      /* min-width: 100%; 
-      width: 100vw;
-      height: 100vh;
-      /* height: auto; 
-      display: block;
-      object-fit: cover;
-
-
-    }
-
-    .map_img {
-      width: 100px;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      margin-left: 100px;
-    }
-
-    .knapper_forside {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      position: absolute;
-      gap: 850px;
-      padding-top: 400px;
-    }
-
-    .mapknap {
-      position: absolute;
-      margin-left: 62%;
-      margin-top: 470px;
-    }
-
-    .col_button {
-      padding-top: 50px;
-    }
-    .col_button1 {
-      padding-top: 30px;
-    }
-    .karrusel {
-      position: relative;
-      margin-left: -190px;
-    }
-    .karrusel_header {
-      position: absolute;
-      top: 35%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      padding-bottom: 40px;
-    }
-
-    .karrusel_1 {
-      position: absolute;
-    }
-    .a {
-      padding-top: 20px;
-    } */
-
-    /* .knapper_forside {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      position: absolute;
-      gap: 100px;
-      padding-top: 900px;
-    } */
-
-    /* .volunteer_forside {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-      } */
-
-    /* .map_img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-      }
-
-      .grid02 {
-        grid-template-columns: 1fr;
-      }
-
-      .grid03 {
-        grid-template-columns: 1fr;
-      } */
-
-    @media (min-width: 800px) {
     }
   </style>
 </LayoutIndex>
