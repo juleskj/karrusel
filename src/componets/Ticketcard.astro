@@ -24,7 +24,7 @@ const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
 <style>
   .ticket_2 {
     display: grid;
-    width: 500px;
+    width: 100%;
   }
   .information {
     grid-column: 1;
@@ -35,9 +35,11 @@ const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
     justify-content: space-between;
     align-self: start;
     padding-left: 50px;
-    padding-right: 50px;
+
+    padding-right: 40px;
+
     padding-top: 20px;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: var(--lillatekstcard);
   }
   .description {
@@ -49,8 +51,7 @@ const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 50px;
-    padding-bottom: 10px;
-    padding-right: 50px;
+    padding-right: 27px;
 
     color: var(--lillatekstcard);
   }
@@ -66,5 +67,23 @@ const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
   }
   .pris {
     font-weight: bold;
+  }
+  @media (min-width: 800px) {
+    .ticket_2 {
+      width: 500px;
+    }
+
+    .information {
+      font-size: 1.8rem;
+      padding-right: 50px;
+    }
+
+    .description {
+      padding-bottom: 10px;
+      padding-right: 50px;
+    }
+    Button {
+      padding: 7px 24px;
+    }
   }
 </style>
