@@ -3,7 +3,14 @@ const { title } = Astro.props;
 import IndexHeader from "../componets/IndexHeader.astro";
 import Footer from "../componets/Footer.astro";
 import Countdown from "../componets/Countdown.astro";
-const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
+const {
+  hero_img,
+  hero_tekst,
+  hero_tekst_green,
+  hero_img_mobil,
+  hasImg = false,
+  hasImgMobil = false,
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -28,7 +35,26 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
   <body>
     <IndexHeader />
     <div class="billede_med_tekst">
-      {hasImg && <img src={hero_img} alt="Hero image" class="hero_img" />}
+      {
+        hasImg && (
+          <>
+            <img src={hero_img} alt="Hero image" class="hero_img" />
+          </>
+        )
+      }
+
+      {
+        hasImgMobil && (
+          <>
+            <img
+              src={hero_img_mobil}
+              alt="Hero image mobil"
+              class="hero_img_mobil"
+            />
+          </>
+        )
+      }
+
       <h1 class="hero_tekst">{hero_tekst}</h1>
       <h2 class="header_green">{hero_tekst_green}</h2>
       <Countdown />
@@ -62,7 +88,8 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
     place-items: center;
     position: relative;
   }
-  .hero_img {
+  .hero_img,
+  .hero_img_mobil {
     width: 100%;
     height: auto;
     display: block;
@@ -70,10 +97,13 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
     min-width: 100%;
     margin-top: -200px;
   }
+  .hero_img {
+    display: none;
+  }
 
   .hero_tekst {
     position: absolute;
-    top: 20%;
+    top: 2%;
     margin-bottom: 20px;
     padding: 0px 20px 10px 20px;
     text-align: center;
@@ -95,6 +125,13 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
 
     .hero_tekst {
       font-size: 50px;
+    }
+
+    .hero_img_mobil {
+      display: none;
+    }
+    .hero_img {
+      display: block;
     }
   }
 </style>

@@ -4,9 +4,12 @@
 
 <style>
   #countdown {
+    position: relative;
+    position: absolute;
+    top: 20%;
+
     max-width: 0;
     padding-right: 50%;
-    padding-top: 30%;
     z-index: 1;
     color: var(--accentgreen);
     font-family: "Jost", sans-serif;
@@ -63,16 +66,16 @@
 
         // Format the countdown text with HTML tags and styles
         var countdownText =
-          "<span style='font-weight: bold;font-size: 70px;'>" +
+          "<span style='font-weight: bold;font-size: 60px;'>" +
           days +
           "</span>D " +
-          "<span style='font-weight: bold;font-size: 70px;'>" +
+          "<span style='font-weight: bold;font-size: 60px;'>" +
           hours +
           "</span>H  " +
-          "<span style='font-weight: bold;font-size: 70px;'>" +
+          "<span style='font-weight: bold;font-size: 60px;'>" +
           minutes +
           "</span>M " +
-          "<span style='font-weight: bold;font-size: 65px;'>" +
+          "<span style='font-weight: bold;font-size: 60px;'>" +
           seconds +
           "</span>S  ";
 
