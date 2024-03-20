@@ -33,14 +33,18 @@ hasImg="true"
       <img class="map_img" src="../../public/img_karrusel/map_forside.png" alt="Map forside" />
     </div>
     <div class="mapknap"><Buttons variant="secondary" size="size"><a href="map">Go to map</a></Buttons></div>
+    </div>
+  </div>
 
     <div class="grid03">
       <div class="grid03_img">
         <img class="volunteer_forside" src="../../public/img_karrusel/volunteer_index.png" alt="volunteer forside" />
       </div>
 
+    
       <h2 class="overskrift">Volunteer</h2>
-      <div class="grid03_text">
+      <div></div>
+      <div class="grid03_text"
         <p>Embark on a unique adventure and be the heartbeat of the festival as a volunteer! Joining our vibrant team offers you the chance to play a pivotal role in creating unforgettable moments—all for free! No special skills are required – just bring your energy, enthusiasm, and passion for making a difference.</p>
         <p>Whether you're interested in tending bars, managing cleanup efforts, ensuring security, or helping with stage building, there's a place for you. Dive into the festival spirit, forge new friendships, and contribute to the magic that makes our event extraordinary. Ready to join the festival family? Sign up now and let the excitement begin!</p>
         <div class="col_button1">
@@ -48,7 +52,7 @@ hasImg="true"
         </div>
       </div>
     </div>
-  </div>
+  </LayoutIndex>
 
   <style>
     .forsidebilde {
@@ -103,16 +107,17 @@ hasImg="true"
 
     .grid03 {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr ;
+      margin-left: -25%;
     }
-
-    .grid03_img {
+.grid03_img {
       margin-top: 200px;
       display: grid;
       place-items: center;
       position: relative;
-      padding-left: 500px;
-    }
+     /* padding-left: 500px; */
+      /* object-fit: scale-down; */
+    } 
 
     .grid03_text {
       font-family: "Hind Madurai", sans-serif;
@@ -134,10 +139,14 @@ hasImg="true"
       padding-top: 315px;
     }
     .volunteer_forside {
-      min-width: 80%;
-      height: auto;
+      /* min-width: 100%; */
+      width: 100vw;
+      height: 100vh;
+      /* height: auto; */
       display: block;
       object-fit: cover;
+
+
     }
 
     .map_img {
@@ -188,16 +197,37 @@ hasImg="true"
       padding-top: 20px;
     }
 
+
+
     @media (max-width: 800px) {
-      h2 {
-        position: relative;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-      }
+     .forsidebilde img {
+      margin-top: -200px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      padding-bottom: 50px;
+      height: 120%;
+      /* max-width: 800px; */
+    }
+    img {
+      min-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .knapper_forside {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: absolute;
+      gap: 100px;
+      padding-top: 900px;
+    }
+
+    h2 {
+      margin-top: -10%;
+    }
+
 
       .volunteer_forside {
         max-width: 100%;
@@ -222,4 +252,3 @@ hasImg="true"
       }
     }
   </style>
-</LayoutIndex>

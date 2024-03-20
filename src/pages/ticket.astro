@@ -4,7 +4,12 @@ import Buttons from "../componets/Buttons.astro";
 const { variant, size } = Astro.props;
 ---
 
+
+
 <MainLayout>
+    <p class="navn_ticket">Tickets</p>
+    <img src="img_karrusel/ticketknap_ticket.png" alt="" class="ticket_image">
+
     <article>
     <div class="ticket_2">
       <p class="navn">Early bird</p>
@@ -52,6 +57,10 @@ const { variant, size } = Astro.props;
 </MainLayout>
 
 <style>
+  @font-face {
+  font-family: Jubilee;
+  src: url(fonts/Jubilee-Lines_MN-Regular.ttf);
+}
 
 article{
     position: relative;
@@ -61,7 +70,21 @@ article{
     bottom: 30px; 
     left: 395px;
 }
-  
+.ticket_image{
+
+  width: 50%;
+
+}
+p{
+  font-family: Jubilee;
+}
+.navn_ticket{
+    position: absolute;
+    font-size: 5rem;
+    font-weight: bold;
+    left: 345px;
+    top: 200px;
+}
 .navn{
     position: absolute;
     bottom: 100px; 
