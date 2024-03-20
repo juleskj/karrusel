@@ -1,240 +1,31 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Ticketcard from "../componets/Ticketcard.astro"
 import Buttons from "../componets/Buttons.astro";
-import Card from "../componets/Card.astro";
 const { variant, size } = Astro.props;
 
 ---
 
-
-
 <MainLayout>
+  <div class="grid_1_1">
 
-    <h1 class="navn_ticket">Tickets</h1>
-    <img src="img_karrusel/ticketknap_ticket.png" alt="" class="ticket_image">
+    <Ticketcard navn="Early bird" pris="1800 kr" beskrivelse="Save money and get a" beskrivelse1="full festival pass"/>
 
-    <article>
-      <div>
-    <div class="ticket_2">
-      <p class="navn">Early bird</p>
-      <p class="pris">1800kr</p>
-      <p class="beskrivelse">Save money and get a </p>
-      <p class="beskrivelse1">full festival pass</p>
-    </div>
-      <div class="buy_knap"><Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons></div>
-      <img src="img_karrusel/ticket.png" alt="ticket"/>
-  
+    <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
 
+      <Ticketcard navn="Thursday 22nd" pris="1000 kr" beskrivelse="One day pass" />
 
-    
-      <!-- <div class="ticket_2">
-        <p class="navn">All day pass</p>
-        <p class="pris">2000kr</p>
-        <p class="beskrivelse1">Full festival pass</p>
-      </div>
-      <div class="buy_knap"><Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons></div>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
-    </div>
-  
-  
+        <Ticketcard navn="Friday 23rd" pris="1000 kr" beskrivelse="One day pass" />
 
-
-
-      <div>
-      <div class="ticket_2">
-        <p class="navn">Thursday 22nd</p>
-        <p class="pris">1000kr</p>
-        <p class="beskrivelse">One day pass</p>
-      </div>
-      <div class="buy_knap"><Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons></div>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
-   
-
-
-  
-      <div class="ticket_2">
-        <p class="navn">Friday 23rd</p>
-        <p class="pris">1000kr</p>
-        <p class="beskrivelse">One day pass</p>
-      </div>
-      <div class="buy_knap"><Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons></div>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
-    
-
-
-  
-      <div class="ticket_2">
-        <p class="navn">Saturday 24th</p>
-        <p class="pris">1000kr</p>
-        <p class="beskrivelse">One day pass</p>
-      </div>
-      <div class="buy_knap"><Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons></div>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
-    </div>
-    </article>-->
-
-
-
-
-
-
-
-     <!--  <p class="navn">All Day Pass</p>
-      <p class="pris">2000kr</p>
-      <p class="beskrivelse">Full festival pass</p>
-      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
-    </div>
-
-    <div class="ticket_3">
-      <div class="foeste_dag">
-        <p class="navn">Thursday 22nd</p>
-        <p class="pris">1000kr</p>
-      </div>
-      <p class="beskrivelse">One day pass</p>
-      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
-
-      <div class="anden_dag">
-        <p class="navn">Friday 23rd</p>
-        <p class="pris">1000kr</p>
-      </div>
-      <p class="beskrivelse">One day pass</p>
-      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
-
-      <div class="trejde_dag">
-        <p class="navn">Saturday 24th</p>
-        <p class="pris">1000kr</p>
-      </div>
-      <p class="beskrivelse">One day pass</p>
-      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
-      <img src="img_karrusel/ticket.png" alt="ticket" />
-    </div>
-  </div>-->
+         <Ticketcard navn="Saturday 24th" pris="1000 kr" beskrivelse="One day pass" />
+  </div>
 </MainLayout>
 
 <style>
-  @font-face {
-  font-family: Jubilee;
-  src: url(fonts/Jubilee Lines MN Regular.ttf);
-}
-.ticket_image{
-display: flex;
-margin-left: 250px;
-  width: 50%;
-
-}
-h1{
-  font-family: Jubilee, sans-serif;
-  margin-left: 250px;
-  margin-top: 10px;
-  color: var(--lillatekstcard);
-}
-article{
-    position: relative;
+  .grid_1_1{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-    padding-top: 150px;
-   
-}
-.buy_knap{
-    position: absolute;
-    bottom: 30px; 
-    left: 395px;
-}
-
-.navn_ticket{
-    position: absolute;
-    font-size: 5rem;
-    font-weight: bold;
-    left: 345px;
-    top: 200px;
-}
-.navn{
-    position: absolute;
-    bottom: 100px; 
-    font-weight: bold;
-    font-size: 30px;
-    left: 10px;
-    color:  #2d224c;
-
-  }
-  .pris{
-    position: absolute;
-    bottom: 100px; 
-   font-weight: bold;
-    left: 400px;
-    font-size: 1.8rem;
-    color:  #2d224c;
-  }
-  .beskrivelse{
-    position: absolute;
-    bottom: 60px; 
-    left: 50px;
- color:  #2d224c;
- font-size: 20px;
- 
-  }
-  .beskrivelse1{
-    position: absolute;
-    bottom: 35px; 
-    left: 50px;
-    color:  #2d224c;
-    font-size: 20px;
-  }
-
-
-
-
-
-
-  .grid_1_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-  }
-
-  .ticket_2 {
-   
-  }
-  
-  body {
-    background-image: url("img_karrusel/Vector.png");
-    object-fit: cover;
-  }
-
-  @media (max-width: 1150px) {
-    .grid_1_1 {
-      display: block;
+    grid-template-columns: 1fr 1fr ;
     }
-  }
-  .ticket_2 {
-    display: block;
-  }
- 
-  .navn {
-    padding-left: 40px;
-  }
-  .foeste_dag {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 280px;
-  }
-  .anden_dag {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 300px;
-  }
-
-  .trejde_dag {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 280px;
-  }
-  .beskrivelse {
-    position: absolute;
-  
-
+    
 </style>
+

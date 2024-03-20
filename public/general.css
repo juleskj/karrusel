@@ -10,6 +10,11 @@
   --lillatekstcard: #2d224c;
 }
 
+/* @font-face {
+  font-family: H1;
+  src: url(Jubilee Lines MN Regular.ttf);
+} */
+
 * {
   margin: 0;
   padding: 0;
