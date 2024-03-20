@@ -1,40 +1,42 @@
 ---
-const {variant, size} = Astro.props;
+const { variant, size } = Astro.props;
 ---
 
-<button class={variant + " " + size}><slot/></button>
+<button class={variant + " " + size}><slot /></button>
 
 <style>
+  button {
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @media (min-width: 800px) {
     button {
-  border-radius: 10px; 
-  padding: 15px 25px; 
-  border: none;
-  cursor: pointer; 
-  font-family: "Hind Madurai", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
+      padding: 15px 25px;
+    }
+  }
 
+  /********** variant **********/
+  .primary {
+    background-color: var(--accentgreen);
+    color: var(--backgroundcolor);
+  }
 
-
-/********** variant **********/
-.primary{
-    background-color: var(--accentgreen); 
-  color: var(--backgroundcolor); 
-}
-
-.primary:hover {
+  .primary:hover {
     background-color: var(--hovergreen);
-}
+  }
 
-.secondary{
-    background-color: var(--lillabutton); 
-  color: var(--backgroundcolor); 
-}
+  .secondary {
+    background-color: var(--lillabutton);
+    color: var(--backgroundcolor);
+  }
 
-.secondary:hover{
+  .secondary:hover {
     background-color: var(--lillabuttonhover);
-}
-
-
+  }
 </style>

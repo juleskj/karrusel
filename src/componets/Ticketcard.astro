@@ -15,7 +15,9 @@ const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
       <p class="beskrivelse1">{beskrivelse1}</p>
     </div>
     <div class="ticket_knap">
-      <Buttons variant="primary" size="size"><a href="ticket">Buy</a></Buttons>
+      <Buttons variant="primary" size="size"
+        ><a class="button" href="/ticket">Buy</a></Buttons
+      >
     </div>
   </div>
   <img class="background" src="img_karrusel/ticket.png" alt="ticket" />
@@ -51,11 +53,11 @@ const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 50px;
-    padding-right: 27px;
+    padding-right: 30px;
+    padding-bottom: 8px;
 
     color: var(--lillatekstcard);
   }
-
   .background {
     grid-column: 1;
     grid-row: 1;
@@ -68,6 +70,11 @@ const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
   .pris {
     font-weight: bold;
   }
+  .button {
+    padding: 0;
+    text-decoration: none;
+  }
+
   @media (min-width: 800px) {
     .ticket_2 {
       width: 500px;
@@ -81,9 +88,6 @@ const { navn, beskrivelse, beskrivelse1, pris } = Astro.props;
     .description {
       padding-bottom: 10px;
       padding-right: 50px;
-    }
-    Button {
-      padding: 7px 24px;
     }
   }
 </style>

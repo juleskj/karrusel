@@ -8,80 +8,86 @@ const { variant, size } = Astro.props;
 <MainLayout>
   <div class="green_ticket">
     <h1 class="overskrift">Tickets</h1>
-    <img src="img_karrusel/ticketknap_ticket.png" alt="ticketknap_ticket" class="grøn_billede" />
+    <img
+      src="img_karrusel/ticketknap_ticket.png"
+      alt="ticketknap_ticket"
+      class="grøn_billede"
+    />
   </div>
   <div class="grid_1_1">
     <div>
       <h2 class="overskrift2">One day - Festival pass</h2>
-      <Ticketcard navn="Thursday 22nd" pris="1000 kr" beskrivelse="One day pass" />
+      <Ticketcard
+        navn="Thursday 22nd"
+        pris="1000 kr"
+        beskrivelse="One day pass"
+      />
 
-      <Ticketcard navn="Friday 23rd" pris="1000 kr" beskrivelse="One day pass" />
+      <Ticketcard
+        navn="Friday 23rd"
+        pris="1000 kr"
+        beskrivelse="One day pass"
+      />
 
-      <Ticketcard navn="Saturday 24th" pris="1000 kr" beskrivelse="One day pass" />
+      <Ticketcard
+        navn="Saturday 24th"
+        pris="1000 kr"
+        beskrivelse="One day pass"
+      />
     </div>
 
     <div class="order">
       <h2 class="overskrift1">Festival pass</h2>
-      <Ticketcard navn="Early bird" pris="1800 kr" beskrivelse="Save money and get a" beskrivelse1="full festival pass" />
+      <Ticketcard
+        navn="Early bird"
+        pris="1800 kr"
+        beskrivelse="Save money and get a"
+        beskrivelse1="full festival pass"
+      />
       <div class="gap">
-        <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
+        <Ticketcard
+          navn="All day pass"
+          pris="2000 kr"
+          beskrivelse="Full festival pass"
+        />
       </div>
       <h2 class="volunteer_tekst">Volunteer?</h2>
       <h3 class="grøn_tekst">Get a free experience</h3>
-      <p class="om_volunteer">Volunteering at a festival is a vibrant celebration of community, teamwork, and service. In the world of festivals, volunteers embody the spirit of togetherness, leaving a lasting impact long after the event concludes.</p>
+      <p class="om_volunteer">
+        Volunteering at a festival is a vibrant celebration of community,
+        teamwork, and service. In the world of festivals, volunteers embody the
+        spirit of togetherness, leaving a lasting impact long after the event
+        concludes.
+      </p>
       <a class="a" href="volunteer">Read more about volunteering</a>
     </div>
   </div>
 
   <style>
-    @media (min-width: 800px) {
-      .grid_1_1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-      }
-      .order {
-        order: -1;
-      }
-
-      .green_ticket {
-        display: grid;
-      }
-
-      .grøn_billede {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-        width: 30%;
-      }
-
-      .overskrift {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-        z-index: 1;
-        justify-self: center;
-        align-self: center;
-      }
-
-      /* .overskrift {
-        padding-left: 350px;
-        padding-top: 10px;
-      }
-      .grøn_billede {
-        padding-top: 10px;
-        width: 75%;
-      } */
+    .green_ticket {
+      display: grid;
+      width: 100%;
+      margin: auto;
+      padding-bottom: 50px;
     }
-    .overskrift {
-      padding-left: 10px;
-      position: absolute;
-      font-size: 6rem;
-      font-family: jost;
-      color: var(--lillatekstcard);
-    }
+
     .grøn_billede {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
       padding-top: 10px;
       width: 100%;
     }
+
+    .overskrift {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      z-index: 1;
+      justify-self: center;
+      align-self: center;
+      color: var(--lillatekstcard);
+      font-size: 3rem;
+    }
+
     .gap {
       margin-top: 40px;
     }
@@ -95,7 +101,6 @@ const { variant, size } = Astro.props;
 
     .grøn_tekst {
       color: var(--accentgreen);
-
       padding-bottom: 20px;
     }
 
@@ -105,8 +110,6 @@ const { variant, size } = Astro.props;
     .om_volunteer {
       padding-bottom: 20px;
       line-height: 180%;
-    }
-    .a {
     }
 
     body {
@@ -119,5 +122,33 @@ const { variant, size } = Astro.props;
         grid-template-columns: 1fr;
       }
     } */
+    .grid_1_1 {
+      padding-bottom: 50px;
+    }
+    @media (min-width: 800px) {
+      .grid_1_1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+      .order {
+        order: -1;
+      }
+
+      /* .overskrift {
+        padding-left: 350px;
+        padding-top: 10px;
+      }
+      .grøn_billede {
+        padding-top: 10px;
+        width: 75%;
+      } */
+      .green_ticket {
+        width: 50%;
+      }
+      .overskrift {
+        font-size: 5rem;
+      }
+    }
   </style>
 </MainLayout>
