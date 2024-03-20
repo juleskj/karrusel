@@ -2,23 +2,36 @@
 const { title } = Astro.props;
 import IndexHeader from "../componets/IndexHeader.astro";
 import Footer from "../componets/Footer.astro";
+import Countdown from "../componets/Countdown.astro";
 const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/img_karrusel/karrusel_logo_hvid.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/img_karrusel/karrusel_logo_hvid.svg"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="/general.css" />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <IndexHeader />
+    <div class="billede_med_tekst">
+      {hasImg && <img src={hero_img} alt="Hero image" class="hero_img" />}
+      <h1 class="hero_tekst">{hero_tekst}</h1>
+      <h2 class="header_green">{hero_tekst_green}</h2>
+      <Countdown />
     </div>
     <main>
       <slot />
@@ -60,7 +73,7 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
 
   .hero_tekst {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -80,3 +93,6 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
     }
   }
 </style>
+
+
+

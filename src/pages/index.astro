@@ -4,16 +4,17 @@ import Buttons from "../componets/IndexButtons.astro";
 import Countdown from "../componets/Countdown.astro";
 ---
 
-<LayoutIndex>
-  <div class="forsidebilde">
-    <img src="../../public/img_karrusel/forside.png" alt="forside bilde" />
-    <h2 class="karrusel_header">KARRUSEL FESTIVAL OPENS IN</h2>
-    <Countdown />
+<LayoutIndex title="Home"
+hero_img="/img_karrusel/forside.png"
+hero_tekst="KARRUSEL FESTIVAL OPENS IN"
+hasImg="true"
+>
+
     <div class="knapper_forside">
       <Buttons class="lineup_knap" variant="primary" size="size"><a href="line_up">Lineup</a></Buttons>
       <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Tickets</a></Buttons>
     </div>
-  </div>
+
 
   <div class="karrusel">
     <h1 class="karrusel_1">Karrusel</h1>
