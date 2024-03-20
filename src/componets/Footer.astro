@@ -5,7 +5,7 @@ import Buttons from "./Buttons.astro";
 <footer>
   <img src="/img_karrusel/karrusel_logo_sort.svg" alt="karrusel logo" />
   <div class="form">
-    <h2>Hold yourself updated with a newsletter!</h2>
+    <h3 class="h3">Hold yourself updated with a newsletter!</h3>
 
     <form>
       <label for="Email"></label>
@@ -27,7 +27,9 @@ import Buttons from "./Buttons.astro";
       Email: <a class="a_lilla" href="https://www.nusnus.dk/contact/"
         >info@nusnus.dk</a
       >
-      <br />
+    </p>
+    <br>
+    <p>
       Karrusel is organized by <a class="a_lilla" href="https://www.nusnus.dk/"
         >NusNus</a
       >
@@ -46,10 +48,9 @@ import Buttons from "./Buttons.astro";
 
   img {
     width: 45%;
-    align-self: center;
     margin-bottom: 50px;
   }
-  h2 {
+  .h3 {
     text-align: center;
   }
   form {
@@ -79,22 +80,21 @@ import Buttons from "./Buttons.astro";
       background-color: var(--offWhite);
       display: flex;
       flex-direction: row-reverse;
-      align-items: center;
+      align-items: start;
       justify-content: center;
       padding: 0;
       margin: 0;
       padding: 0 50px 0 50px;
-
       bottom: 0;
     }
 
     .form {
       padding-bottom: 0;
 
-      margin: 20px 50px 20px 50px;
+      margin: 0px 50px 0px 50px;
     }
     form {
-      padding-bottom: 0;
+      padding-bottom: 50px;
     }
     input {
       height: 40px;
@@ -102,6 +102,17 @@ import Buttons from "./Buttons.astro";
     img {
       width: 12%;
       margin-bottom: 0;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+
+    .h3{
+      padding-top: 50px;
+    }
+
+    .contact{
+      padding-bottom: 50px;
+      padding-top: 50px;
     }
   }
 </style>
