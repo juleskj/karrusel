@@ -8,12 +8,10 @@ const { variant, size } = Astro.props;
 <MainLayout>
   <h1 class="overskrift">Tickets</h1>
   <img src="img_karrusel/ticketknap_ticket.png" alt="ticketknap_ticket" class="grøn_billede" />
-  <div class="skrift">
-    <h2 class="overskrift1">Festival pass</h2>
-    <h2 class="overskrift2">One day - Festival pass</h2>
-  </div>
+
   <div class="grid_1_1">
     <div>
+      <h2 class="overskrift1">Festival pass</h2>
       <Ticketcard navn="Early bird" pris="1800 kr" beskrivelse="Save money and get a" beskrivelse1="full festival pass" />
       <div class="gap">
         <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
@@ -24,6 +22,7 @@ const { variant, size } = Astro.props;
       <a class="a" href="volunteer">Read more about volunteering</a>
     </div>
     <div>
+      <h2 class="overskrift2">One day - Festival pass</h2>
       <Ticketcard navn="Thursday 22nd" pris="1000 kr" beskrivelse="One day pass" />
 
       <Ticketcard navn="Friday 23rd" pris="1000 kr" beskrivelse="One day pass" />
@@ -52,7 +51,6 @@ const { variant, size } = Astro.props;
       padding-bottom: 30px;
     }
     .overskrift2 {
-      padding-left: 80px;
       padding-bottom: 30px;
     }
 
@@ -88,11 +86,11 @@ const { variant, size } = Astro.props;
       background-image: url(../../public/img_karrusel/karusel_bogstav_bagrund.svg);
     }
 
-    /* @media (min-width: 1050px) {
-    .grid_1_1 {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-  } */
+    /* @media (min-width: 800px) {
+      .grid_1_1 {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    } */
   </style>
 </MainLayout>
