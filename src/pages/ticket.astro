@@ -6,11 +6,16 @@ const { variant, size } = Astro.props;
 ---
 
 <MainLayout>
+  <div class="skrift">
+    <h2 class="overskrift1">Festival pass</h2>
+    <h2 class="overskrift2">One day - Festival pass</h2>
+  </div>
   <div class="grid_1_1">
     <div>
       <Ticketcard navn="Early bird" pris="1800 kr" beskrivelse="Save money and get a" beskrivelse1="full festival pass" />
-
-      <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
+      <div class="gap">
+        <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
+      </div>
     </div>
     <div>
       <Ticketcard navn="Thursday 22nd" pris="1000 kr" beskrivelse="One day pass" />
@@ -20,19 +25,37 @@ const { variant, size } = Astro.props;
       <Ticketcard navn="Saturday 24th" pris="1000 kr" beskrivelse="One day pass" />
     </div>
   </div>
-</MainLayout>
 
-<style>
-  .grid_1_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-  }
+  <style>
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
 
-  /* @media (min-width: 1050px) {
+    .gap {
+      margin-top: 40px;
+    }
+
+    .skrift {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .overskrift1 {
+      padding-left: 35px;
+      padding-bottom: 30px;
+    }
+    .overskrift2 {
+      padding-left: 110px;
+      padding-bottom: 30px;
+    }
+
+    /* @media (min-width: 1050px) {
     .grid_1_1 {
       display: grid;
       grid-template-columns: 1fr;
     }
   } */
-</style>
+  </style>
+</MainLayout>
