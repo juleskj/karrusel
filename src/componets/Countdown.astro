@@ -2,30 +2,45 @@
 
 ---
 <style>
-   @media (max-width: 800px) {
+ 
    #countdown {
-position: relative;
+    
 max-width: 0;
 padding-right: 50%;
-padding-top: 80%;
+padding-top: 30%;
+z-index: 1;
+    color: var(--accentgreen);
+    font-family: "Jost", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+ 
    }
-    }
     
     
+    @media (min-width: 800px) {
   #countdown {
-    font-size: 50px;
     position: absolute;
+    text-align: center;
     top: 45%;
     left: 50%;
+    min-width: 107%;
+    padding-top: 0;
+    padding-right: 0;
+    font-size: 50px;
     text-align: center;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    color: var(--accentgreen);
-    width: 107%;
-      font-family: "Jost", sans-serif;
-  font-style: normal;
+   
+     
+}
+
+span{
+  
+}
 
   }
+
+
+
 </style>
 </head>
 <body>
@@ -56,10 +71,10 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     // Format the countdown text with HTML tags and styles
-    var countdownText = "<span style='font-weight: bold;font-size: 84px;'>" + days + "</span>days  " +
-                        "<span style='font-weight: bold;font-size: 84px;'>" + hours + "</span>hours  " +
-                        "<span style='font-weight: bold;font-size: 84px;'>" + minutes + "</span>minutes  " +
-                        "<span style='font-weight: bold;font-size: 84px;'>" + seconds + "</span>seconds  ";
+    var countdownText = "<span style='font-weight: bold;font-size: 70px;'>" + days + "</span>D " +
+                        "<span style='font-weight: bold;font-size: 70px;'>" + hours + "</span>H  " +
+                        "<span style='font-weight: bold;font-size: 70px;'>" + minutes + "</span>M " +
+                        "<span style='font-weight: bold;font-size: 65px;'>" + seconds + "</span>S  ";
     
     // Set the countdown element's HTML content
     countdownElement.innerHTML = countdownText;
