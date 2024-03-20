@@ -1,31 +1,38 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Ticketcard from "../componets/Ticketcard.astro"
+import Ticketcard from "../componets/Ticketcard.astro";
 import Buttons from "../componets/Buttons.astro";
 const { variant, size } = Astro.props;
-
 ---
 
 <MainLayout>
   <div class="grid_1_1">
+    <div>
+      <Ticketcard navn="Early bird" pris="1800 kr" beskrivelse="Save money and get a" beskrivelse1="full festival pass" />
 
-    <Ticketcard navn="Early bird" pris="1800 kr" beskrivelse="Save money and get a" beskrivelse1="full festival pass"/>
-
-    <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
-
+      <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
+    </div>
+    <div>
       <Ticketcard navn="Thursday 22nd" pris="1000 kr" beskrivelse="One day pass" />
 
-        <Ticketcard navn="Friday 23rd" pris="1000 kr" beskrivelse="One day pass" />
+      <Ticketcard navn="Friday 23rd" pris="1000 kr" beskrivelse="One day pass" />
 
-         <Ticketcard navn="Saturday 24th" pris="1000 kr" beskrivelse="One day pass" />
+      <Ticketcard navn="Saturday 24th" pris="1000 kr" beskrivelse="One day pass" />
+    </div>
   </div>
 </MainLayout>
 
 <style>
-  .grid_1_1{
+  .grid_1_1 {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    }
-    
-</style>
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 
+  /* @media (min-width: 1050px) {
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  } */
+</style>
