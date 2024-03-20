@@ -6,8 +6,10 @@ import Buttons from "../componets/IndexButtons.astro";
 <LayoutIndex
   title="Home"
   hero_img="/img_karrusel/forside.png"
+  hero_img_mobil="/img_karrusel/forside_mobil.png"
   hero_tekst="KARRUSEL FESTIVAL OPENS IN"
   hasImg="true"
+  hasImgMobil="true"
 >
   <section class="knapper">
     <div class="knapper_forside">
@@ -38,14 +40,14 @@ import Buttons from "../componets/IndexButtons.astro";
         Straws are not being used.
       </p>
       <div class="col_button">
-        <a class="a" href="about_us">Read about Karrusel Festival</a>
+        <a class="a" href="/about_us">Read about Karrusel Festival</a>
       </div>
     </div>
 
     <div class="grid02_img">
       <img
         class="map_img"
-        src="../../public/img_karrusel/map_forside.png"
+        src="/img_karrusel/map_forside.png"
         alt="Map forside"
       />
 
@@ -76,7 +78,7 @@ import Buttons from "../componets/IndexButtons.astro";
         join the festival family? Sign up now and let the excitement begin!
       </p>
       <div class="col_button1">
-        <a class="a" href="volunteer">Read more about volunterring</a>
+        <a class="a" href="/volunteer">Read more about volunterring</a>
       </div>
     </div>
 
@@ -90,9 +92,17 @@ import Buttons from "../componets/IndexButtons.astro";
   </div>
 
   <style>
-    .karrusel_1 {
-      padding-top: 100px;
+    @media (max-width: 800px) {
+      .knapper {
+        position: absolute;
+        top: 85%;
+      }
     }
+
+    .karrusel_1 {
+      padding-top: 80px;
+    }
+
     .button {
       display: flex;
       align-items: center;
@@ -122,7 +132,7 @@ import Buttons from "../componets/IndexButtons.astro";
     }
 
     .col_button {
-      padding-top: 30px;
+      padding-top: 10px;
     }
 
     .volunteer_forside {
