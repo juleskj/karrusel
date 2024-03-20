@@ -30,13 +30,13 @@ import Buttons from "../componets/IndexButtons.astro";
         We believe in the right of everyone to express themselves. Karrusel
         welcomes everybody, all with their different orientations, experiences,
         histories and backgrounds.
-      </p>
-      <p>
-        Karrusel is committed to becoming more sustainable. In order to save
-        resources and reduce waste we use left over materials and timber for
-        stage designs and installations. We will re-use production and print
-        materials when possible year after year. Beverages are served in
-        reusable or sustainable materials. Straws are not being used.
+        <br />
+        <br />
+        Karrusel is committed to becoming more sustainable. In order to save resources
+        and reduce waste we use left over materials and timber for stage designs
+        and installations. We will re-use production and print materials when possible
+        year after year. Beverages are served in reusable or sustainable materials.
+        Straws are not being used.
       </p>
       <div class="col_button">
         <a class="a" href="about_us">Read about Karrusel Festival</a>
@@ -101,8 +101,7 @@ import Buttons from "../componets/IndexButtons.astro";
 
     .header_green {
       position: relative;
-      left: 50px;
-      top: 10px;
+      /* left: 50px; */
     }
     .grid02 {
       display: grid;
@@ -115,9 +114,12 @@ import Buttons from "../componets/IndexButtons.astro";
     .map_img {
       width: 100%;
     }
-
     .mapknap {
       justify-self: end;
+    }
+
+    .col_button {
+      padding-top: 30px;
     }
 
     .volunteer_forside {
@@ -142,6 +144,31 @@ gap: 650px;
       .knapper {
         position: absolute;
         top: 80%;
+      }
+
+      .grid02 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+      }
+
+      .grid03 {
+        display: grid;
+      }
+
+      .grid03_img {
+        width: 100%;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+      }
+
+      .grid03_text {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        z-index: 1;
+        padding-left: 50%;
+        padding-top: 100px;
+        margin: 10px;
       }
     }
 
