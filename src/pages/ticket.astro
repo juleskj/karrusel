@@ -6,11 +6,22 @@ const { variant, size } = Astro.props;
 ---
 
 <MainLayout>
+  <h1 class="overskrift">Tickets</h1>
+  <img src="img_karrusel/ticketknap_ticket.png" alt="ticketknap_ticket" class="grøn_billede" />
+  <div class="skrift">
+    <h2 class="overskrift1">Festival pass</h2>
+    <h2 class="overskrift2">One day - Festival pass</h2>
+  </div>
   <div class="grid_1_1">
     <div>
       <Ticketcard navn="Early bird" pris="1800 kr" beskrivelse="Save money and get a" beskrivelse1="full festival pass" />
-
-      <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
+      <div class="gap">
+        <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
+      </div>
+      <h2 class="volunteer_tekst">Volunteer?</h2>
+      <h3 class="grøn_tekst">Get a free experience</h3>
+      <p class="om_volunteer">Volunteering at a festival is a vibrant celebration of community, teamwork, and service. In the world of festivals, volunteers embody the spirit of togetherness, leaving a lasting impact long after the event concludes.</p>
+      <a class="a" href="volunteer">Read more about volunteering</a>
     </div>
     <div>
       <Ticketcard navn="Thursday 22nd" pris="1000 kr" beskrivelse="One day pass" />
@@ -20,19 +31,68 @@ const { variant, size } = Astro.props;
       <Ticketcard navn="Saturday 24th" pris="1000 kr" beskrivelse="One day pass" />
     </div>
   </div>
-</MainLayout>
 
-<style>
-  .grid_1_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-  }
+  <style>
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
 
-  /* @media (min-width: 1050px) {
+    .gap {
+      margin-top: 40px;
+    }
+
+    .skrift {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .overskrift1 {
+      padding-bottom: 30px;
+    }
+    .overskrift2 {
+      padding-left: 80px;
+      padding-bottom: 30px;
+    }
+
+    .grøn_tekst {
+      color: var(--accentgreen);
+
+      padding-bottom: 20px;
+    }
+
+    .volunteer_tekst {
+      padding-top: 30px;
+    }
+    .om_volunteer {
+      padding-bottom: 20px;
+      line-height: 180%;
+    }
+    .a {
+    }
+    .grøn_billede {
+      padding-left: 265px;
+      padding-bottom: 75px;
+      padding-top: 10px;
+      width: 75%;
+    }
+    .overskrift {
+      position: absolute;
+      padding-left: 350px;
+      padding-top: 10px;
+      font-size: 6rem;
+      color: var(--lillatekstcard);
+    }
+    body {
+      background-image: url(../../public/img_karrusel/karusel_bogstav_bagrund.svg);
+    }
+
+    /* @media (min-width: 1050px) {
     .grid_1_1 {
       display: grid;
       grid-template-columns: 1fr;
     }
   } */
-</style>
+  </style>
+</MainLayout>
