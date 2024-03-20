@@ -1,7 +1,6 @@
 ---
 import LayoutIndex from "../layouts/LayoutIndex.astro";
 import Buttons from "../componets/IndexButtons.astro";
-import Countdown from "../componets/Countdown.astro";
 ---
 
 <LayoutIndex title="Home"
@@ -9,36 +8,39 @@ hero_img="/img_karrusel/forside.png"
 hero_tekst="KARRUSEL FESTIVAL OPENS IN"
 hasImg="true"
 >
-
+<section class="knapper">
     <div class="knapper_forside">
-      <Buttons class="lineup_knap" variant="primary" size="size"><a href="line_up">Lineup</a></Buttons>
-      <Buttons class="ticket_knap" variant="primary" size="size"><a href="ticket">Tickets</a></Buttons>
+      <Buttons class="lineup_knap" variant="primary" size="size"> <a href="/line_up" class="button">Line up</a></Buttons>
+      <Buttons class="ticket_knap" variant="primary" size="size"><a href="/ticket"class="button">Tickets</a></Buttons>
     </div>
+  </section>
 
 
   <div class="karrusel">
     <h1 class="karrusel_1">Karrusel</h1>
     <h2 class="header_green">FESTIVAL</h2>
   </div>
+
+
   <div class="grid02">
     <div class="grid02_text">
       <p>Karrusel believes in the right to a harassment-free festival experience. We believe in the right of everyone to express themselves. Karrusel welcomes everybody, all with their different orientations, experiences, histories and backgrounds.</p>
       <p>Karrusel is committed to becoming more sustainable. In order to save resources and reduce waste we use left over materials and timber for stage designs and installations. We will re-use production and print materials when possible year after year. Beverages are served in reusable or sustainable materials. Straws are not being used.</p>
       <div class="col_button">
-        <a class="a" href="about_us">Read more</a>
+        <a class="a" href="about_us">Go to map</a>
       </div>
     </div>
 
     <div class="grid02_img">
-      <img class="map_img" src="../../public/img_karrusel/map_forside.png" alt="Map forside" />
+      <!--<img class="map_img" src="../../public/img_karrusel/map_forside.png" alt="Map forside" />-->
     </div>
-    <div class="mapknap"><Buttons variant="secondary" size="size"><a href="map">Go to map</a></Buttons></div>
+    <div class="mapknap"><Buttons variant="secondary" size="size" ><a class="button" href="/map">Go to map</a></Buttons></div>
     </div>
   </div>
 
     <div class="grid03">
       <div class="grid03_img">
-        <img class="volunteer_forside" src="../../public/img_karrusel/volunteer_index.png" alt="volunteer forside" />
+        <!--<img class="volunteer_forside" src="../../public/img_karrusel/volunteer_index.png" alt="volunteer forside" />-->
       </div>
 
     
@@ -48,20 +50,50 @@ hasImg="true"
         <p>Embark on a unique adventure and be the heartbeat of the festival as a volunteer! Joining our vibrant team offers you the chance to play a pivotal role in creating unforgettable moments—all for free! No special skills are required – just bring your energy, enthusiasm, and passion for making a difference.</p>
         <p>Whether you're interested in tending bars, managing cleanup efforts, ensuring security, or helping with stage building, there's a place for you. Dive into the festival spirit, forge new friendships, and contribute to the magic that makes our event extraordinary. Ready to join the festival family? Sign up now and let the excitement begin!</p>
         <div class="col_button1">
-          <a class="a" href="volunteer">Read more</a>
+          <a class="a" href="volunteer">Read more about volunterring</a>
         </div>
       </div>
     </div>
   </LayoutIndex>
 
   <style>
-    .forsidebilde {
-      margin-top: -200px;
-      display: grid;
-      place-items: center;
-      position: relative;
-      padding-bottom: 50px;
-    }
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ text-decoration: none;
+ padding: 13px 0; 
+
+}
+
+
+@media (min-width: 800px) {
+  /*.knapper_forside{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 650px;
+  }*/
+
+  .knapper_forside{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Juster gap efter behov */
+  justify-items: center; /* Centrer indholdet vandret */
+  margin: 0 auto;
+  }
+ 
+
+.knapper{
+  position: absolute;
+  top: 80%;
+  
+  
+}
+  
+}
+
+/*  
     img {
       min-width: 100%;
       height: auto;
@@ -116,7 +148,7 @@ hasImg="true"
       place-items: center;
       position: relative;
      /* padding-left: 500px; */
-      /* object-fit: scale-down; */
+      /* object-fit: scale-down; 
     } 
 
     .grid03_text {
@@ -131,7 +163,7 @@ hasImg="true"
       /* margin-left: -100px;
   margin-right: 50px;
   margin-top: 50px;
-  margin-bottom: -20px; */
+  margin-bottom: -20px; 
     }
     .overskrift {
       position: absolute;
@@ -139,10 +171,10 @@ hasImg="true"
       padding-top: 315px;
     }
     .volunteer_forside {
-      /* min-width: 100%; */
+      /* min-width: 100%; 
       width: 100vw;
       height: 100vh;
-      /* height: auto; */
+      /* height: auto; 
       display: block;
       object-fit: cover;
 
@@ -195,48 +227,29 @@ hasImg="true"
     }
     .a {
       padding-top: 20px;
-    }
+    } */
 
 
+   
 
-    @media (max-width: 800px) {
-     .forsidebilde img {
-      margin-top: -200px;
-      display: grid;
-      place-items: center;
-      position: relative;
-      padding-bottom: 50px;
-      height: 120%;
-      /* max-width: 800px; */
-    }
-    img {
-      min-width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-
-    .knapper_forside {
+    /* .knapper_forside {
       display: grid;
       grid-template-columns: 1fr 1fr;
       position: absolute;
       gap: 100px;
       padding-top: 900px;
-    }
+    } */
 
-    h2 {
-      margin-top: -10%;
-    }
+   
 
-
-      .volunteer_forside {
+      /* .volunteer_forside {
         max-width: 100%;
         height: auto;
         display: block;
         object-fit: cover;
-      }
+      } */
 
-      .map_img {
+      /* .map_img {
         max-width: 100%;
         height: auto;
         display: block;
@@ -249,6 +262,9 @@ hasImg="true"
 
       .grid03 {
         grid-template-columns: 1fr;
-      }
+      } */
+
+    @media (min-width: 800px) {
+  
     }
   </style>

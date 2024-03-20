@@ -74,11 +74,15 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
   .hero_tekst {
     position: absolute;
     top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 20px;
+    padding: 0px 20px 10px 20px;
+    text-align: center;
     z-index: 1;
     color: #fff;
+    font-size: 22px;
   }
+
+  m
 
   .header_green {
     position: absolute;
@@ -91,6 +95,12 @@ const { hero_img, hero_tekst, hero_tekst_green, hasImg = false } = Astro.props;
       margin-top: 70px;
       padding: 0 0 150px 0;
     }
+
+    .hero_tekst {
+      
+      font-size: 50px;
+    }
+
   }
 </style>
 
