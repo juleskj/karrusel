@@ -4,12 +4,14 @@ import Buttons from "../componets/IndexButtons.astro";
 ---
 
 <LayoutIndex title="Home" hero_img="/img_karrusel/forside.png" hero_img_mobil="/img_karrusel/forside_mobil.png" hero_tekst="KARRUSEL FESTIVAL OPENS IN" hasImg="true" hasImgMobil="true">
-  <section class="knapper">
-    <div class="knapper_forside">
-      <Buttons class="lineup_knap" variant="primary" size="size"> <a href="/line_up" class="button">Line up</a></Buttons>
-      <Buttons class="ticket_knap" variant="primary" size="size"><a href="/ticket" class="button">Tickets</a></Buttons>
-    </div>
-  </section>
+  <div class="center_grid">
+    <section class="knapper">
+      <div class="knapper_forside">
+        <Buttons class="lineup_knap" variant="primary" size="size"> <a href="/line_up" class="button">Line up</a></Buttons>
+        <Buttons class="ticket_knap" variant="primary" size="size"><a href="/ticket" class="button">Tickets</a></Buttons>
+      </div>
+    </section>
+  </div>
 
   <div class="center_grid">
     <div>
@@ -17,28 +19,30 @@ import Buttons from "../componets/IndexButtons.astro";
       <h2 class="header_green">FESTIVAL</h2>
     </div>
   </div>
-  <section class="center_grid">
-    <div class="grid02">
-      <div class="grid02_text">
-        <p>
-          Karrusel believes in the right to a harassment-free festival experience. We believe in the right of everyone to express themselves. Karrusel welcomes everybody, all with their different orientations, experiences, histories and backgrounds.
-          <br />
-          <br />
-          Karrusel is committed to becoming more sustainable. In order to save resources and reduce waste we use left over materials and timber for stage designs and installations. We will re-use production and print materials when possible year after year. Beverages are served in reusable or sustainable materials. Straws are not being used.
-        </p>
-        <div class="col_button">
-          <a class="a" href="/about_us">Read about Karrusel Festival</a>
+  <div class="luft_inden_frivillig">
+    <section class="center_grid">
+      <div class="grid02">
+        <div class="grid02_text">
+          <p>
+            Karrusel believes in the right to a harassment-free festival experience. We believe in the right of everyone to express themselves. Karrusel welcomes everybody, all with their different orientations, experiences, histories and backgrounds.
+            <br />
+            <br />
+            Karrusel is committed to becoming more sustainable. In order to save resources and reduce waste we use left over materials and timber for stage designs and installations. We will re-use production and print materials when possible year after year. Beverages are served in reusable or sustainable materials. Straws are not being used.
+          </p>
+          <div class="col_button">
+            <a class="a" href="/about_us">Read about Karrusel Festival</a>
+          </div>
         </div>
-      </div>
-      <div class="grid02_img">
-        <img class="map_img" src="/img_karrusel/map_forside.png" alt="Map forside" />
+        <div class="grid02_img">
+          <img class="map_img" src="/img_karrusel/map_forside.png" alt="Map forside" />
 
-        <div class="mapknap">
-          <Buttons variant="secondary" size="size"><a class="button" href="/map">Go to map</a></Buttons>
+          <div class="mapknap">
+            <Buttons variant="secondary" size="size"><a class="button" href="/map">Go to map</a></Buttons>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <section class="center_grid">
     <div class="grid03">
@@ -129,6 +133,7 @@ import Buttons from "../componets/IndexButtons.astro";
     .grid03_text {
       z-index: 1;
       padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     .overskrift {
@@ -153,7 +158,7 @@ gap: 650px;
 
       .knapper {
         position: relative;
-        bottom: 250px;
+        bottom: 350px;
       }
 
       .center_grid {
@@ -164,7 +169,7 @@ gap: 650px;
 
       .center_grid > * {
         width: 100%;
-        max-width: 800px;
+        max-width: 1000px;
       }
 
       .grid02 {
@@ -190,6 +195,13 @@ gap: 650px;
         padding-left: 50%;
         padding-top: 100px;
         margin: 10px;
+      }
+
+      .center_grid {
+        padding-bottom: 20px;
+      }
+      .luft_inden_frivillig {
+        padding-bottom: 200px;
       }
     }
   </style>
