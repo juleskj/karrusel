@@ -14,8 +14,9 @@
       <li><a href="/ticket">Tickets</a></li>
       <li><a href="/map">Map</a></li>
 
-      <li>
-        <a id="logo" href="/"><div class="logo_img"></div></a>
+      <li id="logo">
+        <p>22-24 AUG 2024</p>
+        <a href="/"><div class="logo_img"></div></a>
       </li>
       <li><a href="/volunteer">Volunteer</a></li>
       <li><a href="/about_us">About us</a></li>
@@ -158,16 +159,19 @@
     list-style-type: none;
   }
 
-  #logo {
-    display: grid;
-  }
   .logo_img {
+    display: block;
     background-image: url(/img_karrusel/karrusel_logo_hvid.svg);
-    width: 80%;
-    height: 80px;
+    width: 80px;
+    height: 50px;
     background-repeat: no-repeat;
     background-size: contain;
-    justify-self: center;
+  }
+  #logo {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    color: var(--offWhite);
   }
 
   /******* Desktop **********/
@@ -178,11 +182,13 @@
       width: 100px;
       height: 62px;
     }
-
-    #logo:hover {
-      border: none;
+    #logo {
+      color: var(--offBlack);
     }
-
+    #logo :hover {
+      border: none;
+      color: var(--offBlack);
+    }
     li :hover {
       color: var(--hovergreen);
       border-bottom: solid 2px var(--hovergreen);
