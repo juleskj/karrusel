@@ -10,14 +10,6 @@
   --lillatekstcard: #2d224c;
 }
 
-/*@font-face {
-  font-family: "Jubilee";
-  src: url(/Jubilee-Lines-MN-Regular.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}*/
-
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +22,8 @@
 /***************************** Styles ********************************/
 /********** H1 ***********/
 /********************************************************** Dowload ***********************************/
+
+/* Register your custom font family and tell the browser where to find it. */
 h1 {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;

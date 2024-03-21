@@ -13,11 +13,17 @@
       <li><a href="/line_up">Line up</a></li>
       <li><a href="/ticket">Tickets</a></li>
       <li><a href="/map">Map</a></li>
-      <li>
-        <a id="logo" href="/"
-          ><img src="/img_karrusel/karrusel_logo_hvid.svg" alt="logo" /></a
+      <!--<li>
+        <a id="logo" href="/">
+        <p>22-24 AUG 2024</p>
+          <img src="/img_karrusel/karrusel_logo_hvid.svg" alt="logo" /></a
         >
+      </li>-->
+      <li id="logo">
+        <p>22-24 AUG 2024</p>
+        <a href="/"><div class="logo_img"></div></a>
       </li>
+      
       <li><a href="/volunteer">Volunteer</a></li>
       <li><a href="/about_us">About us</a></li>
     </ul>
@@ -25,6 +31,25 @@
 </header>
 
 <style>
+  .logo_img {
+    display: block;
+    background-image: url(/img_karrusel/karrusel_logo_hvid.svg);
+    width: 80px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  #logo {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    color: var(--offWhite);
+  }
+
+  #logo:hover{
+    color:var(--offWhite);
+  }
+
   /******** Brugermenu ************/
   @media (max-width: 800px) {
     #menu_toggle:checked ~ ul {
@@ -174,7 +199,7 @@
     }
 
     #logo :hover {
-      color: var(--hovergreen);
+      color: var(--offWhite);
       border-bottom: none;
       border-radius: 2px;
     }

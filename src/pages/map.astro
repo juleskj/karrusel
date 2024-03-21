@@ -4,12 +4,15 @@ import Buttons from "../componets/Buttons.astro";
 ---
 
 <MainLayout>
+  <img src="img_karrusel/cirkel_mobil.svg" alt="ticketknap_ticket" class="cirkel" />
   <div class="overskrift_map">
     <h1 class="h1_map">Map</h1>
     <div class="grid_1_1">
       <div class="map_billede">
         <img src="img_karrusel/map.svg" alt="map" />
       </div>
+      <p class="here">You are here</p>
+      <img src="img_karrusel/cirkel_mobil.svg" alt="ticketknap_ticket" class="cirkel1" />
 
       <div class="ikoner_map">
         <img src="img_karrusel/ikoner.svg" alt="ikoner" />
@@ -51,6 +54,16 @@ import Buttons from "../componets/Buttons.astro";
   .ikoner_mobil {
     display: none;
   }
+  .cirkel {
+    display: none;
+  }
+
+  .cirkel1 {
+    display: none;
+  }
+  .here {
+    display: none;
+  }
 
   @media (max-width: 1150px) {
     .grid_1_1 {
@@ -67,12 +80,35 @@ import Buttons from "../componets/Buttons.astro";
     }
     .ikoner_mobil {
       display: block;
-      padding-left: 10PX;
+      padding-left: 10px;
     }
     img {
       object-fit: cover;
       width: 100%;
       padding-bottom: 50px;
+    }
+    .cirkel {
+      display: block;
+      position: absolute;
+      width: 5%;
+      left: 28%;
+      top: 32.4%;
+    }
+    .cirkel1 {
+      display: block;
+      position: absolute;
+      width: 5%;
+      background-color:;
+      left: 84%;
+      top: 60%;
+    }
+    .here {
+      display: block;
+      bottom: 37%;
+      left: 50%;
+      font-weight: bold;
+      position: absolute;
+      font-size: 1.3rem;
     }
   }
 </style>
