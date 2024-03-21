@@ -2,16 +2,12 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../componets/Card.astro";
 
-const data = await fetch(
-  "https://mxyfxhqkhfgyyjilxsyp.supabase.co/rest/v1/kunstner",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14eWZ4aHFraGZneXlqaWx4c3lwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTIxMjcsImV4cCI6MjAyNjA2ODEyN30.350mDzxoRHMq4A0wyQk4cc2Fks8AFFXKxv7PEaTSbIs",
-    },
-  }
-).then((respone) => {
+const data = await fetch("https://mxyfxhqkhfgyyjilxsyp.supabase.co/rest/v1/kunstner", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14eWZ4aHFraGZneXlqaWx4c3lwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTIxMjcsImV4cCI6MjAyNjA2ODEyN30.350mDzxoRHMq4A0wyQk4cc2Fks8AFFXKxv7PEaTSbIs",
+  },
+}).then((respone) => {
   return respone.json();
 });
 ---
@@ -41,7 +37,8 @@ const data = await fetch(
   }
   .header_green {
     position: relative;
-    left: 9%;
+    left: 60%;
+    width: 0;
   }
   .line_up {
     display: grid;
