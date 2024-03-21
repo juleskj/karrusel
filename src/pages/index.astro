@@ -3,12 +3,23 @@ import LayoutIndex from "../layouts/LayoutIndex.astro";
 import Buttons from "../componets/IndexButtons.astro";
 ---
 
-<LayoutIndex title="Home" hero_img="/img_karrusel/forside.png" hero_img_mobil="/img_karrusel/forside_mobil.png" hero_tekst="KARRUSEL FESTIVAL OPENS IN" hasImg="true" hasImgMobil="true">
+<LayoutIndex
+  title="Home"
+  hero_img="/img_karrusel/forside.png"
+  hero_img_mobil="/img_karrusel/forside_mobil.png"
+  hero_tekst="KARRUSEL FESTIVAL OPENS IN"
+  hasImg="true"
+  hasImgMobil="true"
+>
   <div class="center_grid">
     <section class="knapper">
       <div class="knapper_forside">
-        <Buttons class="lineup_knap" variant="primary" size="size"> <a href="/line_up" class="button">Line up</a></Buttons>
-        <Buttons class="ticket_knap" variant="primary" size="size"><a href="/ticket" class="button">Tickets</a></Buttons>
+        <Buttons class="lineup_knap" variant="primary" size="size">
+          <a href="/line_up" class="button">Line up</a></Buttons
+        >
+        <Buttons class="ticket_knap" variant="primary" size="size"
+          ><a href="/ticket" class="button">Tickets</a></Buttons
+        >
       </div>
     </section>
   </div>
@@ -24,20 +35,33 @@ import Buttons from "../componets/IndexButtons.astro";
       <div class="grid02">
         <div class="grid02_text">
           <p>
-            Karrusel believes in the right to a harassment-free festival experience. We believe in the right of everyone to express themselves. Karrusel welcomes everybody, all with their different orientations, experiences, histories and backgrounds.
+            Karrusel believes in the right to a harassment-free festival
+            experience. We believe in the right of everyone to express
+            themselves. Karrusel welcomes everybody, all with their different
+            orientations, experiences, histories and backgrounds.
             <br />
             <br />
-            Karrusel is committed to becoming more sustainable. In order to save resources and reduce waste we use left over materials and timber for stage designs and installations. We will re-use production and print materials when possible year after year. Beverages are served in reusable or sustainable materials. Straws are not being used.
+            Karrusel is committed to becoming more sustainable. In order to save
+            resources and reduce waste we use left over materials and timber for
+            stage designs and installations. We will re-use production and print
+            materials when possible year after year. Beverages are served in reusable
+            or sustainable materials. Straws are not being used.
           </p>
           <div class="col_button">
             <a class="a" href="/about_us">Read about Karrusel Festival</a>
           </div>
         </div>
         <div class="grid02_img">
-          <img class="map_img" src="/img_karrusel/map_forside.png" alt="Map forside" />
+          <img
+            class="map_img"
+            src="/img_karrusel/map_forside.png"
+            alt="Map forside"
+          />
 
           <div class="mapknap">
-            <Buttons variant="secondary" size="size"><a class="button" href="/map">Go to map</a></Buttons>
+            <Buttons variant="secondary" size="size"
+              ><a class="button" href="/map">Go to map</a></Buttons
+            >
           </div>
         </div>
       </div>
@@ -48,10 +72,20 @@ import Buttons from "../componets/IndexButtons.astro";
     <div class="grid03">
       <div class="grid03_text">
         <h2 class="overskrift">Volunteer</h2>
-        <p>Embark on a unique adventure and be the heartbeat of the festival as a volunteer! Joining our vibrant team offers you the chance to play a pivotal role in creating unforgettable moments—all for free! No special skills are required – just bring your energy, enthusiasm, and passion for making a difference.</p>
+        <p>
+          Embark on a unique adventure and be the heartbeat of the festival as a
+          volunteer! Joining our vibrant team offers you the chance to play a
+          pivotal role in creating unforgettable moments—all for free! No
+          special skills are required – just bring your energy, enthusiasm, and
+          passion for making a difference.
+        </p>
         <br />
         <p>
-          Whether you're interested in tending bars, managing cleanup efforts, ensuring security, or helping with stage building, there's a place for you. Dive into the festival spirit, forge new friendships, and contribute to the magic that makes our event extraordinary. Ready to join the festival family? Sign up now and let the excitement begin!
+          Whether you're interested in tending bars, managing cleanup efforts,
+          ensuring security, or helping with stage building, there's a place for
+          you. Dive into the festival spirit, forge new friendships, and
+          contribute to the magic that makes our event extraordinary. Ready to
+          join the festival family? Sign up now and let the excitement begin!
         </p>
         <div class="col_button1">
           <a class="a" href="/volunteer">Read more about volunteering</a>
@@ -88,7 +122,7 @@ import Buttons from "../componets/IndexButtons.astro";
 
     .header_green {
       position: relative;
-      left: 50px;
+      left: 20%;
       width: 0;
     }
     .grid02 {
@@ -158,7 +192,7 @@ gap: 650px;
 
       .knapper {
         position: relative;
-        bottom: 350px;
+        bottom: 250px;
       }
 
       .center_grid {
