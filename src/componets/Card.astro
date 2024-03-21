@@ -51,7 +51,7 @@ const { data } = Astro.props;
   }
 
   h4 {
-    grid-column: span 3;
+    grid-column: 1/3;
     padding-left: 20px;
   }
 
@@ -72,6 +72,9 @@ const { data } = Astro.props;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(/public/img_karrusel/sportify_hvid.svg);
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    justify-self: center;
   }
 
   .card-image {
