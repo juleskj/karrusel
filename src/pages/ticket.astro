@@ -8,27 +8,57 @@ const { variant, size } = Astro.props;
 <MainLayout>
   <div class="green_ticket">
     <h1 class="overskrift">Tickets</h1>
-    <img src="img_karrusel/ticketknap_ticket.png" alt="ticketknap_ticket" class="grøn_billede" />
+    <img
+      src="img_karrusel/ticketknap_ticket.png"
+      alt="ticketknap_ticket"
+      class="grøn_billede"
+    />
   </div>
   <div class="grid_1_1">
     <div>
       <h2 class="overskrift2">One day - Festival pass</h2>
-      <Ticketcard navn="Thursday 22nd" pris="1000 kr" beskrivelse="One day pass" />
+      <Ticketcard
+        navn="Thursday 22nd"
+        pris="1000 kr"
+        beskrivelse="One day pass"
+      />
 
-      <Ticketcard navn="Friday 23rd" pris="1000 kr" beskrivelse="One day pass" />
+      <Ticketcard
+        navn="Friday 23rd"
+        pris="1000 kr"
+        beskrivelse="One day pass"
+      />
 
-      <Ticketcard navn="Saturday 24th" pris="1000 kr" beskrivelse="One day pass" />
+      <Ticketcard
+        navn="Saturday 24th"
+        pris="1000 kr"
+        beskrivelse="One day pass"
+      />
     </div>
 
     <div class="order">
       <h2 class="overskrift1">Festival pass</h2>
-      <Ticketcard navn="Early bird" pris="1800 kr" beskrivelse="Save money and get a" beskrivelse1="full festival pass" />
+      <Ticketcard
+        navn="Early bird"
+        pris="1800 kr"
+        beskrivelse="Save money and get a"
+        beskrivelse1="full festival pass"
+      />
       <div class="gap">
-        <Ticketcard navn="All day pass" pris="2000 kr" beskrivelse="Full festival pass" />
+        <Ticketcard
+          navn="All day pass"
+          pris="2000 kr"
+          beskrivelse="Full festival pass"
+        />
       </div>
       <h2 class="volunteer_tekst">Volunteer?</h2>
       <h3 class="grøn_tekst">Get a free experience</h3>
-      <p class="om_volunteer">Volunteering at a festival is a vibrant celebration of community, teamwork, and service. In the world of festivals, volunteers embody the spirit of togetherness, leaving a lasting impact long after the event concludes.</p>
+      <p class="om_volunteer">
+        Volunteering at a festival is a vibrant celebration of community,
+        teamwork, and service. In the world of festivals, volunteers embody the
+        spirit of togetherness, leaving a lasting impact long after the event
+        concludes.
+      </p>
       <a class="a" href="volunteer">Read more about volunteering</a>
     </div>
   </div>
@@ -88,6 +118,10 @@ const { variant, size } = Astro.props;
     .grid_1_1 {
       padding-bottom: 50px;
     }
+
+    .order {
+      padding-top: 60px;
+    }
     @media (min-width: 800px) {
       .grid_1_1 {
         display: grid;
@@ -96,6 +130,7 @@ const { variant, size } = Astro.props;
       }
       .order {
         order: -1;
+        padding-top: 0;
       }
       .green_ticket {
         width: 50%;
