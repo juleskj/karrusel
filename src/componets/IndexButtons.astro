@@ -7,7 +7,7 @@ const {variant, size} = Astro.props;
 <style>
     button {
   border-radius: 10px; 
-  padding: 3px 50px; 
+  padding: 5px 20px;
   border: none;
   cursor: pointer; 
 }
@@ -31,20 +31,10 @@ const {variant, size} = Astro.props;
     background-color: var(--lillabuttonhover);
 }
 
-/*********** size ***********/
-
-/*********** Mobil *********/
-@media (max-width: 800px){
-    .size{
-    font-size: 1rem;
-}
-}
-
-/*********** Desktop *********/
 @media (min-width: 800px){
-    .size{
-    font-size: 3rem;
-}
+button {
+      padding: 5px 25px;
+    }
 }
 
 </style>
