@@ -3,93 +3,58 @@ import LayoutIndex from "../layouts/LayoutIndex.astro";
 import Buttons from "../componets/IndexButtons.astro";
 ---
 
-<LayoutIndex
-  title="Home"
-  hero_img="/img_karrusel/forside.png"
-  hero_img_mobil="/img_karrusel/forside_mobil.png"
-  hero_tekst="KARRUSEL FESTIVAL OPENS IN"
-  hasImg="true"
-  hasImgMobil="true"
->
+<LayoutIndex title="Home" hero_img="/img_karrusel/forside.png" hero_img_mobil="/img_karrusel/forside_mobil.png" hero_tekst="KARRUSEL FESTIVAL OPENS IN" hasImg="true" hasImgMobil="true">
   <section class="knapper">
     <div class="knapper_forside">
-      <Buttons class="lineup_knap" variant="primary" size="size">
-        <a href="/line_up" class="button">Line up</a></Buttons
-      >
-      <Buttons class="ticket_knap" variant="primary" size="size"
-        ><a href="/ticket" class="button">Tickets</a></Buttons
-      >
+      <Buttons class="lineup_knap" variant="primary" size="size"> <a href="/line_up" class="button">Line up</a></Buttons>
+      <Buttons class="ticket_knap" variant="primary" size="size"><a href="/ticket" class="button">Tickets</a></Buttons>
     </div>
   </section>
 
-  <h1 class="karrusel_1">Karrusel</h1>
-  <h2 class="header_green">FESTIVAL</h2>
-  <div class="grid02">
-    <div class="grid02_text">
-      <p>
-        Karrusel believes in the right to a harassment-free festival experience.
-        We believe in the right of everyone to express themselves. Karrusel
-        welcomes everybody, all with their different orientations, experiences,
-        histories and backgrounds.
-        <br />
-        <br />
-        Karrusel is committed to becoming more sustainable. In order to save resources
-        and reduce waste we use left over materials and timber for stage designs
-        and installations. We will re-use production and print materials when possible
-        year after year. Beverages are served in reusable or sustainable materials.
-        Straws are not being used.
-      </p>
-      <div class="col_button">
-        <a class="a" href="/about_us">Read about Karrusel Festival</a>
-      </div>
-    </div>
-
-    <div class="grid02_img">
-      <img
-        class="map_img"
-        src="/img_karrusel/map_forside.png"
-        alt="Map forside"
-      />
-
-      <div class="mapknap">
-        <Buttons variant="secondary" size="size"
-          ><a class="button" href="/map">Go to map</a></Buttons
-        >
-      </div>
+  <div class="center_grid">
+    <div>
+      <h1 class="karrusel_1">Karrusel</h1>
+      <h2 class="header_green">FESTIVAL</h2>
     </div>
   </div>
+  <section class="center_grid">
+    <div class="grid02">
+      <div class="grid02_text">
+        <p>
+          Karrusel believes in the right to a harassment-free festival experience. We believe in the right of everyone to express themselves. Karrusel welcomes everybody, all with their different orientations, experiences, histories and backgrounds.
+          <br />
+          <br />
+          Karrusel is committed to becoming more sustainable. In order to save resources and reduce waste we use left over materials and timber for stage designs and installations. We will re-use production and print materials when possible year after year. Beverages are served in reusable or sustainable materials. Straws are not being used.
+        </p>
+        <div class="col_button">
+          <a class="a" href="/about_us">Read about Karrusel Festival</a>
+        </div>
+      </div>
+      <div class="grid02_img">
+        <img class="map_img" src="/img_karrusel/map_forside.png" alt="Map forside" />
 
-  <div class="grid03">
-    <div class="grid03_text">
-      <h2 class="overskrift">Volunteer</h2>
-      <p>
-        Embark on a unique adventure and be the heartbeat of the festival as a
-        volunteer! Joining our vibrant team offers you the chance to play a
-        pivotal role in creating unforgettable moments—all for free! No special
-        skills are required – just bring your energy, enthusiasm, and passion
-        for making a difference.
-      </p>
-      <br />
-      <p>
-        Whether you're interested in tending bars, managing cleanup efforts,
-        ensuring security, or helping with stage building, there's a place for
-        you. Dive into the festival spirit, forge new friendships, and
-        contribute to the magic that makes our event extraordinary. Ready to
-        join the festival family? Sign up now and let the excitement begin!
-      </p>
-      <div class="col_button1">
-        <a  class="a" href="/volunteer">Read more about volunteering</a>
+        <div class="mapknap">
+          <Buttons variant="secondary" size="size"><a class="button" href="/map">Go to map</a></Buttons>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="grid03_img">
-      <img
-        class="volunteer_forside"
-        src="/img_karrusel/volunteer_index.png"
-        alt="volunteer forside"
-      />
+  <section class="center_grid">
+    <div class="grid03">
+      <div class="grid03_text">
+        <h2 class="overskrift">Volunteer</h2>
+        <p>Embark on a unique adventure and be the heartbeat of the festival as a volunteer! Joining our vibrant team offers you the chance to play a pivotal role in creating unforgettable moments—all for free! No special skills are required – just bring your energy, enthusiasm, and passion for making a difference.</p>
+        <br />
+        <p>
+          Whether you're interested in tending bars, managing cleanup efforts, ensuring security, or helping with stage building, there's a place for you. Dive into the festival spirit, forge new friendships, and contribute to the magic that makes our event extraordinary. Ready to join the festival family? Sign up now and let the excitement begin!
+        </p>
+        <div class="col_button1">
+          <a class="a" href="/volunteer">Read more about volunteering</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
   <style>
     @media (max-width: 800px) {
@@ -100,15 +65,14 @@ import Buttons from "../componets/IndexButtons.astro";
     }
 
     .knapper_forside {
-        display: flex;
-        justify-content:space-around;
-      }
+      display: flex;
+      justify-content: space-around;
+    }
 
-      .knapper {
-        position: relative;
-        bottom: 150px;
-      }
-
+    .knapper {
+      position: relative;
+      bottom: 150px;
+    }
 
     .button {
       display: flex;
@@ -142,19 +106,24 @@ import Buttons from "../componets/IndexButtons.astro";
       padding-top: 50px;
     }
 
-    .col_button1{
+    .col_button1 {
       padding-top: 50px;
     }
 
     .volunteer_forside {
       width: 100%;
     }
+
+    .center_grid > * {
+      padding: 0px 20px;
+    }
     .grid03 {
       display: grid;
     }
     .grid03_img {
       width: 100%;
-      align-self: end;
+      position: fixed;
+      bottom: 0px;
     }
 
     .grid03_text {
@@ -165,8 +134,6 @@ import Buttons from "../componets/IndexButtons.astro";
     .overskrift {
       padding-bottom: 20px;
     }
-
-
 
     @media (min-width: 800px) {
       /*.knapper_forside{
@@ -187,6 +154,17 @@ gap: 650px;
       .knapper {
         position: relative;
         bottom: 250px;
+      }
+
+      .center_grid {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .center_grid > * {
+        width: 100%;
+        max-width: 800px;
       }
 
       .grid02 {
