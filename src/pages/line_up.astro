@@ -18,25 +18,30 @@ const data = await fetch(
 
 <MainLayout title="Line up">
   <div class="karrusel_bogstav">
-  
-    <h1 class="h1_line_up_luft">Line up</h1>
+    <div class="green_h1">
+      <h1 class="karrusel_1">Line up</h1>
+      <h2 class="header_green">2024</h2>
+    </div>
     <section class="line_up">
-      { //map bliver brugt til at køre igennem vores data og for hver gang vi 
-      //har noget data så retunere den noget data i vores card.
+      {
+        //map bliver brugt til at køre igennem vores data og for hver gang vi
+        //har noget data så retunere den noget data i vores card.
         data.map((artist) => {
           return <Card data={artist} />;
         })
       }
     </section>
-  
-</div>
+  </div>
 </MainLayout>
 
 <style>
-  
-
-  .h1_line_up_luft {
+  .green_h1 {
+    text-align: center;
     padding-bottom: 50px;
+  }
+  .header_green {
+    position: relative;
+    left: 9%;
   }
   .line_up {
     display: grid;
@@ -45,11 +50,9 @@ const data = await fetch(
   }
 
   @media (min-width: 800px) {
- 
-
-    body{
-background-image: url(../../public/img_karrusel/karusel_bogstav_bagrund.svg);
-width: 100%;
-
-    }}
+    body {
+      background-image: url(../../public/img_karrusel/karusel_bogstav_bagrund.svg);
+      width: 100%;
+    }
+  }
 </style>
