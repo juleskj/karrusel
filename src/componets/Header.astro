@@ -15,9 +15,7 @@
       <li><a href="/map">Map</a></li>
 
       <li>
-        <a id="logo" href="/"
-          ><img src="/img_karrusel/karrusel_logo_sort.svg" alt="logo" /></a
-        >
+        <a id="logo" href="/"><div class="logo_img"></div></a>
       </li>
       <li><a href="/volunteer">Volunteer</a></li>
       <li><a href="/about_us">About us</a></li>
@@ -141,13 +139,6 @@
     background-image: url(favicon.svg);
   }
 
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-  }
-
   header {
     position: sticky;
     top: 0;
@@ -160,25 +151,43 @@
     padding: 5px 15px;
     margin: 0 10px;
   }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+  }
 
-  .logo img {
-    max-width: 80px;
+  #logo {
+    display: grid;
+  }
+  .logo_img {
+    background-image: url(/img_karrusel/karrusel_logo_hvid.svg);
+    width: 80%;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-self: center;
   }
 
   /******* Desktop **********/
   @media (min-width: 800px) {
+    .logo_img {
+      display: block;
+      background-image: url(/img_karrusel/karrusel_logo_sort.svg);
+      width: 100px;
+      height: 62px;
+    }
+
+    #logo:hover {
+      border: none;
+    }
+
     li :hover {
       color: var(--hovergreen);
       border-bottom: solid 2px var(--hovergreen);
       border-radius: 2px;
     }
-
-    #logo :hover {
-      color: var(--hovergreen);
-      border-bottom: none;
-      border-radius: 2px;
-    }
-
     header a {
       color: var(--offBlack);
     }
