@@ -3,7 +3,11 @@ import Buttons from "./Buttons.astro";
 ---
 
 <footer>
-  <img src="/img_karrusel/karrusel_logo_sort.svg" alt="karrusel logo" />
+  <img
+    class="logo"
+    src="/img_karrusel/karrusel_logo_sort.svg"
+    alt="karrusel logo"
+  />
   <div class="form">
     <h3 class="h3">Hold yourself updated with a newsletter!</h3>
 
@@ -34,6 +38,20 @@ import Buttons from "./Buttons.astro";
         >NusNus</a
       >
     </p>
+
+    <div class="iconer">
+      <a
+        href="https://www.facebook.com/events/602360444604770/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A401093138774337%7D%7D]%22%7D"
+        target="_blank"
+        ><img src="/img_karrusel/facebook_icon.svg" alt="facebook icon" /></a
+      >
+      <a href="https://www.instagram.com/karruselfest/" target="_blank"
+        ><img
+          src="../../public/img_karrusel/instagram_icon.svg"
+          alt="instagram icon"
+        /></a
+      >
+    </div>
   </div>
 </footer>
 
@@ -47,13 +65,22 @@ import Buttons from "./Buttons.astro";
     align-items: center;
   }
 
-  img {
+  .logo img {
     width: 45%;
     margin-bottom: 50px;
   }
   .h3 {
     text-align: center;
   }
+  .iconer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .iconer a img {
+    width: 40px;
+  }
+
   form {
     padding-bottom: 50px;
   }
@@ -90,8 +117,6 @@ import Buttons from "./Buttons.astro";
     }
 
     .form {
-      padding-bottom: 0;
-
       margin: 0px 50px 0px 50px;
     }
     form {
@@ -100,7 +125,7 @@ import Buttons from "./Buttons.astro";
     input {
       height: 40px;
     }
-    img {
+    .logo {
       width: 12%;
       margin-bottom: 0;
       padding-bottom: 50px;
@@ -112,7 +137,6 @@ import Buttons from "./Buttons.astro";
     }
 
     .contact {
-      padding-bottom: 50px;
       padding-top: 50px;
     }
   }
