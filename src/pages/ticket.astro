@@ -74,7 +74,6 @@ const { variant, size } = Astro.props;
     .grøn_billede {
       grid-column: 1 / span 1;
       grid-row: 1 / span 1;
-      padding-top: 10px;
       width: 100%;
     }
 
@@ -94,7 +93,6 @@ const { variant, size } = Astro.props;
 
     .overskrift1 {
       padding-bottom: 30px;
-      
     }
     .overskrift2 {
       padding-bottom: 30px;
@@ -116,9 +114,13 @@ const { variant, size } = Astro.props;
     body {
       background-image: url(../../public/img_karrusel/karusel_bogstav_bagrund.svg);
     }
-    
+
     .grid_1_1 {
       padding-bottom: 50px;
+    }
+
+    .order {
+      padding-top: 60px;
     }
     @media (min-width: 800px) {
       .grid_1_1 {
@@ -128,6 +130,7 @@ const { variant, size } = Astro.props;
       }
       .order {
         order: -1;
+        padding-top: 0;
       }
       .green_ticket {
         width: 50%;
@@ -138,12 +141,12 @@ const { variant, size } = Astro.props;
 
       .overskrift1 {
         margin-top: 0;
-      } 
+      }
 
       .overskrift2 {
         margin-top: 0;
-      } 
-      
+      }
+
       /* .overskrift {
         padding-left: 350px;
         padding-top: 10px;
